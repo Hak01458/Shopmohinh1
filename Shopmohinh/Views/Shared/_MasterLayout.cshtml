@@ -1,0 +1,126 @@
+﻿<style type="text/css">
+    html {
+        font-size: 14px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    body {
+        background-color: whitesmoke;
+    }
+
+    #container {
+        border: 2px solid deepskyblue;
+        border-radius: 20px;
+    }
+
+    header {
+        background-color: deepskyblue;
+        border: 5px solid #5486d7;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Cart {
+        position: relative;
+    }
+
+    .cart-count {
+        position: absolute;
+        top: -50px;
+        left: 1090px;
+        background-color: pink;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 50%;
+        margin-block: 10px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+        nav ul li {
+            margin-left: 30px;
+            font-size: 1.2rem;
+        }
+
+    ul li a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    section {
+        background-color: snow;
+        min-height: 700px;
+    }
+
+    nav ul li img {
+        height: 15px;
+    }
+
+    nav {
+        text-align: right;
+    }
+</style>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="logo">
+                <a href="~/Home/trangchu"><img src="~/Content/img/logo.jpg" alt="logo" /></a>
+                <div class="Cart">
+                    <a href="~/Product/ShoppingCart">
+                        <span class="cart-count ">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                FREE SHIPPING ON ALL ORDER. NO MINIMUM PURCHASE
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/img/cart.jpg" />
+                        </a>
+                        <a href="#">Shopping Cart</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="~/Content/img/hearticon.jpg" /></a>
+                        <a href="#">My Wishlist</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/img/acconticon.jpg" />
+                        </a>
+                        <a href="#">Sign or Create an account</a>
+
+                </ul>
+
+            </nav>
+        </header>
+        <section>
+
+            @RenderBody()
+        </section>
+        <footer>
+            Footer
+        </footer>
+
+
+    </div>
+</body>
+</html>

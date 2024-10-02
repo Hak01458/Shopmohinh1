@@ -1,0 +1,290 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<style type="text/css">
+    #banner {
+        background-image: url("../Content/img/anhnen1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: white;
+    }
+
+
+    .banner-content {
+        text-align: center;
+        color: white;
+    }
+
+        .banner-content h2 {
+            font-size: 2rem;
+        }
+
+        .banner-content p {
+            font-size: 1.5rem;
+        }
+
+        .banner-content a {
+            font-size: 2rem;
+        }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: deepskyblue;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    #futureProd {
+        text-align: center;
+    }
+
+    .proDContainer {
+        display: flex;
+        justify-content: center;
+        gap: 50px
+    }
+
+    .product-item3 {
+        background-image: url("../Content/img/gundame.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 400px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: yellow;
+    }
+
+    .product-item1 {
+        background-image: url("../Content/img/anime1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 400px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: yellow;
+    }
+
+    .product-item2 {
+        background-image: url("../Content/img/lego.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 400px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: yellow;
+    }
+
+    .ntn {
+        display: inline-block;
+        padding: 10px 0px;
+        /*background-color: deepskyblue;*/
+        color: orange;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+
+    /* #futureProd {
+        text-align: center;
+    }
+
+    #futureProd h2{
+        font-size:2rem;
+        margin-bottom:20px;
+    }
+    .proDContainer {
+        display: flex;
+        justify-content: center;
+        gap: 20px
+    }
+    .product-item{
+        width:1200px;
+    }
+
+    .product-item h3{
+        font-size:25px;
+        color:black;
+        margin:10px 0px;
+    }*/
+    /*.prodDescription{
+        font:arial;
+        font-size:20px;
+        color:lightgreen;
+    }*/
+    .prodPrice {
+        font-size: 20px;
+        color: green;
+        font-weight: bold;
+    }
+
+    .content-section {
+        text-align: center;
+    }
+
+        .content-section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    /* .search-container {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    #search-input{
+        width:400px;
+        height:25px;
+        padding:10px;
+        border: 1px solid deepskyblue;
+        border-radius:5px 0 0 5px;
+    }
+    #search{
+        background-color:lightskyblue;
+
+    }*/
+    .main-menu ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: left;
+        background-color: black;
+        height: 20px;
+    }
+
+        .main-menu ul li {
+            margin: 0 30px;
+        }
+
+            .main-menu ul li a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+
+    #productList {
+        text-align: center;
+    }
+
+        #productList h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+    .list-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px
+    }
+
+    .product-item {
+        width: 500px;
+    }
+
+        .product-item h2 {
+            font-size: 25px;
+            color: black;
+            margin: 10px 0px;
+        }
+
+    .proD {
+        font-size: 20px;
+        color: lawngreen;
+        font: arial;
+    }
+
+    .price {
+        font-size: 20px;
+        color: green;
+        font-weight: bold;
+    }
+</style>
+<nav class="main-menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">LookBook</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQS</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+    </ul>
+</nav>
+<section id="banner">
+    <div class="banner-content">
+        <h2>Chào mừng bạn đến với shop bán mô hình của chúng tôi </h2>
+        <p>Rất nhiều mô hình đẹp đang chờ bạn săn đón</p>
+        <a href="#" class="btn">Bắt đầu mua sắm</a>
+    </div>
+</section>
+@*<section id="search" class="content-section">
+        <h2>TÌm kiếm sản phẩm</h2>
+        <điv class="search-container">
+            <input type="text" id="search-input" placeholder="Nhập từ khóa...."/>
+            <button id="search-button">Tìm kiếm</button>
+        </điv>
+    </section>*@
+
+<section id="futureProd" class="content-section">
+    <h2></h2>
+    <div class="proDContainer">
+        <div class="product-item3">
+            <!--<img src="~/Content/img/gundame.jpg" />-->
+            <a href="#" class="ntn">GunDam</a>
+            @*<p class="prodDescription">Gia:</p>
+                <p class="prodPrice">129.000d</p>*@
+        </div>
+        <div class="product-item1">
+            @*<img src="~/Content/img/anime1.jpg" />*@
+            <a href="#" class="ntn">Anime</a>
+            @*<p class="prodDescription">Gia:</p>
+                <p class="prodPrice">60.000d</p>*@
+        </div>
+        <div class="product-item2">
+            @*<img src="~/Content/img/lego.jpg" />*@
+            <a href="#" class="ntn">Lego</a>
+            @*<p class="prodDescription">Gia:</p>
+                <p class="prodPrice">50.000d</p>*@
+        </div>
+    </div>
+</section>
+<section id="productList">
+    <h2>--------------------------------------------------------------Danh sách sản phẩm-----------------------------------------------------------------------</h2>
+    <ul class="list-container">
+        <li class="product-item">
+            <img src="~/Content/img/gundam1.jpg" />
+            <h2>Mô hình 1</h2>
+            <p class="proD">Gia:</p>
+            <p class="price">1.200.000d</p>
+        </li>
+        <li class="product-item">
+            <img src="~/Content/img/gundam2.jpg" />
+            <h2>Mô hình 2</h2>
+            <p class="proD">Gia:</p>
+            <p class="price">3.000.000d</p>
+        </li>
+        <li class="product-item">
+            <img src="~/Content/img/gundam3.jpg" />
+            <h2>Mô hình 3</h2>
+            <p class="proD">Gia:</p>
+            <p class="price">10.000.000d</p>
+        </li>
+        <li class="product-item">
+            <img src="~/Content/img/gundam4.jpg" />
+            <h2>Mô hình 4</h2>
+            <p class="proD">Gia:</p>
+            <p class="price">6.000.000d</p>
+        </li>
+    </ul>
+</section>
