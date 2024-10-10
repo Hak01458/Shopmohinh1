@@ -1,0 +1,93 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+<style type="text/css">
+    form {
+        border: 3px solid #000000;
+        height: 400px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+    .imgcontainer {
+        height: 100px;
+    }
+
+    .containerlogin {
+        justify-content: center;
+        display: flex;
+    }
+
+    img.avatar {
+        width: 200px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    .register a {
+        color: blue;
+    }
+</style>
+<form action="action_page.php" method="post">
+    <div class="containerlogin">
+        @*<div class="imgcontainer">
+                <img src="~/Content/image/con rong.png" alt="Avatar" class="avatar">
+            </div>*@
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                <span class="psw">Forgot <a href="#">password?</a></span>
+
+            </label>
+            <button type="submit">Login</button>
+            <div class="register">
+                Chưa có tài khoản?<a href="~/User/Register">  Tạo tài khoản</a>
+            </div>
+
+        </div>
+    </div>
+</form>

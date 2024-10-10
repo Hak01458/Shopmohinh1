@@ -1,0 +1,466 @@
+﻿<style type="text/css">
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-top {
+        justify-content: space-between;
+        width: 800px;
+    }
+
+        .container-top a {
+            list-style-type: none;
+            color: black;
+        }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .span1 img {
+        height: 200px;
+    }
+
+    #Container1 {
+        justify-content: center;
+        display: flex;
+        border: 2px solid deepskyblue;
+        border-radius: 20px;
+        padding: 30px;
+        width: 600px;
+        margin: 0 auto;
+    }
+    .span1{
+        
+    }
+    .span2{
+        margin-right:4rem;
+    }
+
+    
+    .text1 {
+        width: 200px;
+        margin-top: 6rem;
+    }
+
+    .tier-list {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .tier-container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .tier {
+        border: 2px solid deepskyblue;
+        border-radius: 10px;
+        padding: 20px;
+        width: 200px;
+        background-color: #f0f8ff;
+    }
+
+        .tier h3 {
+            color: deepskyblue;
+        }
+
+    .tier-content {
+        margin-top: 10px;
+    }
+
+        .tier-content p {
+            margin: 5px 0;
+        }
+
+    .address-form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .address-form label {
+            margin: 5px 0;
+        }
+
+        .address-form input {
+            margin: 5px 0;
+            padding: 8px;
+            width: 300px;
+        }
+
+    .total-price, .final-price {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .total-price h3, .final-price h3 {
+            margin: 0;
+        }
+
+        .total-price p, .final-price p {
+            font-weight: bold;
+        }
+
+    .terms {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+        .terms input {
+            margin-right: 10px;
+        }
+
+    .place-order {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+        .place-order h3 {
+            margin-bottom: 10px;
+        }
+
+        .place-order button {
+            padding: 10px 20px;
+            background-color: deepskyblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .place-order button:hover {
+                background-color: darkblue;
+            }
+         .span1 img{
+             height:150px;
+         }
+    .quantity-control {
+        /*display: flex;
+        align-items: center;*/
+        margin-top:10rem;
+        
+    }
+
+        .quantity-control button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+            .quantity-control button:hover {
+                background-color: dodgerblue;
+            }
+
+    #quantity {
+        width: 40px;
+        height: 30px;
+        text-align: center;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+    }
+    #total-price {
+        margin-top: 20px;
+        font-size: 15px;
+        font-weight: bold;
+        color: black;
+    }
+    .All{
+        width:600px;
+        text-align:right;
+    }
+    .giohang-content-left {
+        /*justify-content: center;
+        display: flex;*/
+        border: 2px solid deepskyblue;
+        border-radius: 20px;
+        padding: 30px;
+        width: 600px;
+        margin: 0 auto;
+    }
+    .giohang-content-left p{
+        font-size:20px;
+        margin-top:-1.2rem;
+    }
+    .gioitinh {
+        /*display: flex;
+        align-items: center;*/
+        font-size: 15px;
+        margin-block: 1rem;
+    }
+    .buy-method {
+        font-size: 15px;
+        margin-block: 1rem;
+    }
+    /*.giaohang-content-right1 {*/
+        /* justify-content: center;
+display: flex;*/
+        /*border: 2px solid deepskyblue;
+        border-radius: 20px;
+        padding: 30px;
+        width: 600px;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }*/
+    .giaohang-content-right1 {
+        border: 2px solid deepskyblue;
+        border-radius: 20px;
+        padding: 15px; /* Giảm padding */
+        width: 100%;
+        max-width: 630px;
+        margin: 0 auto;
+        max-height: 350px; /* Giới hạn chiều cao */
+        overflow-y: auto;   
+        margin-top:1rem;
+    }
+    .giaohang-content-right1 p{
+        margin-top:1rem;
+        font-size:20px;
+    }
+    #city-select{
+        height:40px;
+        width:200px;
+    }
+    .diachict{
+        margin-top:2rem;
+        
+    }
+        .diachict input {
+            height:40px;
+            width:500px;
+            margin-top:-1rem;
+        }
+        .omau{
+            background-color:lightgray;
+            height:270px;
+            
+        }
+        .thanhpho{
+            margin-top:1rem;
+        }
+        .ghichu{
+            margin-top:2rem;
+        }
+            .ghichu input {
+                height: 40px;
+                width: 500px;
+                margin-top: -1rem;
+            }
+
+    .tongtien {
+        /*justify-content: center;
+display: flex;*/
+        border: 2px solid deepskyblue;
+        border-radius: 20px;
+        padding: 30px;
+        width: 600px;
+        margin: 0 auto;
+        margin-top:1rem;
+        margin-bottom:2rem;
+       
+    }
+    .giohang{
+        margin-top:-22rem;
+    }
+    .xacnhan {
+        background-color: deepskyblue;
+        text-decoration: none;
+        border-radius: 20px;
+        padding: 20px 20px; /* Thêm padding để tạo khoảng cách bên trong */
+        width: 600px; /* Đặt chiều rộng cụ thể */
+        text-align: center; /* Căn giữa nội dung */
+        display: inline-block; /* Cần thiết để chiều rộng hoạt động */
+        color: white;
+        margin-left:-1.5rem;
+    }
+    .chu{
+        text-align:center;
+    }
+</style>
+
+
+@{
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+
+
+
+<section class="proDdetail">
+    <div class="container">
+        <div class="container-top row">
+            <a href="~/Home/TrangChu"><p><span>&#60;</span>Quay lại trang chủ</p></a>
+            <p>Giỏ hàng của bạn</p>
+        </div>
+
+
+
+    </div>
+    <div id="Container1">
+        <div class="span1">
+            <img src="~/Content/img/ace.jpg" />
+            <p class="text1">Tạm tính (1 sản phẩm)</p>
+        </div>
+        <div class="span2">
+            <a>Mô Hình ACE đứng nâng cầu có Led – Cao 39cm nặng 3kg1 – Box Carton</a>
+
+        </div>
+        <div class="All">
+            <p>930.000<span> &#8363;</span></p>
+            <div class="quantity-control">
+                @*<p>930.000<span> &#8363;</span></p>*@
+                <button id="decrement">-</button>
+                <input type="number" id="quantity" value="1" min="1" readonly />
+                <button id="increment">+</button>
+                <p id="total-price">Thành tiền: <span id="price">930.000</span> &#8363;</p>
+            </div>
+        </div>
+        <script>
+            
+            document.addEventListener("DOMContentLoaded", function () {
+                const incrementButton = document.getElementById("increment");
+                const decrementButton = document.getElementById("decrement");
+                const quantityInput = document.getElementById("quantity");
+                const totalPrice = document.getElementById("total-price");
+                const totalMoneyDisplay = document.querySelector(".final-price p"); // Đối tượng hiển thị tổng tiền
+                const itemPrice = 930000; // Giá sản phẩm
+
+                function updateTotalPrice() {
+                    const quantity = parseInt(quantityInput.value);
+                    const total = quantity * itemPrice;
+                    totalPrice.innerHTML = `Thành tiền: <span>${total.toLocaleString()}</span> &#8363;`;
+                    totalMoneyDisplay.innerHTML = `${total.toLocaleString()}<span> &#8363;</span>`; // Cập nhật tổng tiền
+                }
+
+                incrementButton.addEventListener("click", function () {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                    updateTotalPrice();
+                });
+
+                decrementButton.addEventListener("click", function () {
+                    if (parseInt(quantityInput.value) > 1) {
+                        quantityInput.value = parseInt(quantityInput.value) - 1;
+                        updateTotalPrice();
+                    }
+                });
+
+                updateTotalPrice(); // Cập nhật ngay khi trang được tải
+            });
+        </script>
+    </div>
+</section>
+<section class="giohang">
+    <div class="container">
+        <div class="giao hang-top-wrap">
+            <div class="gio hang-top">
+                <div class="gio hang-top-gio hang gio hang-top-item">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="giao hang-top-address giao hang-top-item">
+                    <i class="fas fa-map-market-alt"></i>
+                </div>
+                <div class="giao hang-top-paykment giao hang-top-item">
+                    <i class="fas  fa-money-check-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="gio hang-content">
+
+            <div class="giohang-content-left">
+                <p>thông tin khách hàng</p>
+                <div class="gioitinh">
+                    <input class="gioitinh2" type="radio" name="gioitinh1" id="gioitinh1-nam" />
+                    <label for="gioitinh1-nam">Nam</label>
+                    <input class="gioitinh2" type="radio" name="gioitinh1" id="gioitinh1-nu" />
+                    <label for="gioitinh1-nu">Nữ</label>
+                </div>
+                <div class="gio hang-content-left-top row ">
+                    <div class="gio hang-content-left-input-top-item">
+                        <label for=" ">Họ tên<span style="color:red;">*</span></label>
+                        <input type="text">
+                    </div>
+                    <div class="gio hang-content-left-input-top-item">
+                        <label for=" ">điện thoại<span style="color:red;">*</span></label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            
+            <div class="giaohang-content-right1">
+                <p> Hình thức nhận hàng  </p>
+                <div class="buy-method">
+                    <input class="muahang" type="radio" name="muahang" id="muahang-thang" />
+                    <label for="muahang-thang">Giao hàng tận nơi</label>
+                    <input class="muahang" type="radio" name="muahang" id="muahang-tragop" />
+                    <label for="muahang-tragop">Nhận tại cửa hàng</label>
+                </div>
+                <section class="tier-list">
+                    <div class="omau">
+                        <select id="city-select" class="thanhpho">
+                            <option value="">Chọn thành phố</option>
+                            <option value="Thành phố A">Thành phố Hồ Chí Minh</option>
+                            <option value="Thành phố B">Bà Rịa Vũng Tàu</option>
+                            <option value="Thành phố C">Cần Thơ</option>
+                            <option value="Thành phố D">Đà Lạt</option>
+                            <option value="Thành phố D">Lâm Đồng</option>
+                            <option value="Thành phố D">Đồng Nai</option>
+                            <option value="Thành phố D">Cà Mau</option>
+                        </select>
+                        <select id="city-select" class="thanhpho">
+                            <option value="">Chọn quận/ huyện</option>
+                            <option value="quận 1">quận 1</option>
+                            <option value="quận 2">quận 2</option>
+                            <option value="quận 3">quận 3</option>
+                            <option value="quận 4">quận 4</option>
+                            <option value="quận 4">quận 5</option>
+                            <option value="quận 4">quận 7</option>
+                            <option value="quận 4">quận 8</option>
+                            <option value="quận 4">quận 10</option>
+                            <option value="quận 4">quận 11</option>
+                            <option value="quận 4">quận 12</option>
+                            <option value="quận 4">quận Tân Bình</option>
+                            <option value="quận 4">Tân Phú</option>
+                            <option value="quận 4">Thủ Đức</option>
+                        </select>
+                        <div class="diachict">
+                            <p>Địa chỉ cụ thể</p>
+                            <input type="text" id="full-name" required>
+                        </div>
+                        <div class="ghichu">
+                            <p>Nhập ghi chú nếu có</p>
+                            <input type="text" id="full-name" required>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+                    <div class="tongtien">
+                        <div class="final-price">
+                            <h3>Tổng tiền</h3>
+                            <p>930.000<span> &#8363;</span></p>
+                        </div>
+                        <div class="terms">
+                            <input type="checkbox" id="agree-terms" required>
+                            <label for="agree-terms">Tôi đồng ý với các điều khoản của website</label>
+                        </div>
+                      <a href="~/ShoppingCart/Xacnhandonhang" class="xacnhan">Tiến hành đặt hàng</a>
+                      <p class="chu">Bạn có thể lựa chọn các hình thức thanh toán ở bước sau</p>
+                    </div>
+            </div>
+    </div>
+</section>

@@ -188,7 +188,8 @@
     }
 
     .product-item {
-        width: 500px;
+        width: 400px;
+        
     }
 
         .product-item h2 {
@@ -207,6 +208,10 @@
         font-size: 20px;
         color: green;
         font-weight: bold;
+    }
+    .ace-img {
+        width: 200px; /* Thay đổi kích thước theo mong muốn */
+        height: auto; /* Giữ tỷ lệ hình ảnh */
     }
 </style>
 <nav class="main-menu">
@@ -263,28 +268,31 @@
     <h2>--------------------------------------------------------------Danh sách sản phẩm-----------------------------------------------------------------------</h2>
     <ul class="list-container">
         <li class="product-item">
-            <img src="~/Content/img/gundam1.jpg" />
-            <h2>Mô hình 1</h2>
+            <a href="~/Product/ProductDetail">
+            <img src="~/Content/img/ace.jpg" class="ace-img"/>
+            </a>
+            <a href="~/Product/ProductDetail"><h2>Mô Hình ACE đứng nâng cầu có Led – Cao 39cm nặng 3kg1 – Box Carton</h2></a>
             <p class="proD">Gia:</p>
-            <p class="price">1.200.000d</p>
+            <p class="price">930.000<span>&#8363;</span></p>
         </li>
         <li class="product-item">
-            <img src="~/Content/img/gundam2.jpg" />
-            <h2>Mô hình 2</h2>
+            <img src="~/Content/img/goku.png"  class="ace-img"/>
+            <h2>Mô Hình Songoku Ultra vô cực Có Led – Cao 29cm nặng 1400gr – Hộp Màu</h2>
             <p class="proD">Gia:</p>
-            <p class="price">3.000.000d</p>
+            <p class="price">550.000<span>&#8363;</span></p>
         </li>
         <li class="product-item">
-            <img src="~/Content/img/gundam3.jpg" />
-            <h2>Mô hình 3</h2>
+            <img src="~/Content/img/naruto.png"  class="ace-img"/>
+            <h2>Mô hình Naruto Lục đạo Cửu Vĩ Rasengan – Cao 28cm Nặng 1,5kg – Có hộp màu</h2>
             <p class="proD">Gia:</p>
-            <p class="price">10.000.000d</p>
+            <p class="price">430.000<span>&#8363;</span></p>
         </li>
         <li class="product-item">
-            <img src="~/Content/img/gundam4.jpg" />
-            <h2>Mô hình 4</h2>
+            <img src="~/Content/img/hancok.png"  class="ace-img"/>
+            <h2>Mô Hình Boa Hancock ngồi ghế – Cao 16cm nặng 1200gr – Hộp màu</h2>
             <p class="proD">Gia:</p>
-            <p class="price">6.000.000d</p>
+            <p class="price">380.000<span>&#8363;</span></p>
         </li>
+        
     </ul>
 </section>

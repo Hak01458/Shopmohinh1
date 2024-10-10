@@ -1,0 +1,153 @@
+﻿<style type="text/css">
+    .container{
+        display:flex;
+        justify-content:center;
+    }
+    .container-top {
+        justify-content: space-between;
+        width: 800px;
+        
+    }
+        .container-top a {
+            list-style-type: none;
+            color:black;
+        }
+    .row{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .span1 img {
+        height:200px;
+       
+    }
+    #Container1 {
+        justify-content: center;
+        display: flex;
+        border: 2px solid deepskyblue;
+        border-radius: 20px;
+        padding: 100px;
+        width: 500px;
+        margin: 0 auto; 
+    }
+    .span2{
+        /*justify-content:center;
+        display:flex;*/
+        margin-left:1rem;
+        height:50px;
+       
+       
+    }
+    .Piece{
+        margin-left:20rem;
+    }
+    .text1{
+        width:200px;
+        margin-top:6rem;
+    }
+</style>
+
+
+@{
+    ViewBag.Title = "GiohangDathang";
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+<section class="proDdetail">
+    <div class="container">
+        <div class="container-top row">
+            <a href="~/Home/TrangChu"><p><span>&#60;</span>Quay lại trang chủ</p></a>
+            <p>Giỏ hàng của bạn</p>
+
+        </div>
+
+
+
+    </div>
+    <div id="Container1">
+        <div class="span1">
+            <img src="~/Content/img/ace.jpg" />
+            <p class="text1">Tạm tính (1 sản phẩm)</p>
+        </div>
+        <div class="span2">
+            <h3>Mô Hình ACE đứng nâng cầu có Led – Cao 39cm nặng 3kg1 – Box Carton</h3>
+            <p class="Piece">1.000.000đ</p>
+        </div>
+    </div>
+</section>
+
+<section class="giao hang">
+    <div class="container">
+        <div class="giao hang-top-wrap">
+            <div class="giao hang-top">
+                <div class="giao hang-top-giao hang giao hang-top-item">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="giao hang-top-address giao hang-top-item">
+                    <i class="fas fa-map-market-alt"></i>
+                </div>
+                <div class="giao hang-top-paykment giao hang-top-item">
+                    <i class="fas  fa-money-check-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="giao hang-content-left-bottom row">
+            <a href=""><span>&#171;</span><p>Quay lại giỏ hàng</p></a>
+            <button><p style="font-weight: bold;">Thanh toán và giao hàng</p></button>
+        </div>
+        <div class="giao hang-content">
+
+            <div class="giao hang-content-left">
+                <p>tên sp</p>
+                <p>Tạm tính (1 sản phẩm)</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="giao hang-content">
+
+            <div class="giao hang-content-left">
+                <p>thông tin khách hàng</p>
+                <div class="giao hang-content-left-nam row">
+                    <input checked name="gioitinh" type="radio" />
+                    <p><span style="font-weight: bold;">nam</span></p>
+                </div>
+                <div class="giao hang-content-left-nu row">
+                    <input name="gioitinh" type="radio" />
+                    <p><span style="font-weight: bold;">nữ</span></p>
+                </div>
+                <div class="giao hang-content-left-top row ">
+                    <div class="giao hang-content-left-input-top-item">
+                        <label for=" ">Họ tên<span style="color:red;">*</span></label>
+                        <input type="text">
+                    </div>
+                    <div class="giao hang-content-left-input-top-item">
+                        <label for=" ">điện thoại<span style="color:red;">*</span></label>
+                        <input type="text">
+                    </div>
+                    <div class="giao hang-content-left-input-top-item">
+                        <label for=" ">Tỉnh/Tp<span style="color:red;">*</span></label>
+                        <input type="text">
+                    </div>
+                    <div class="giao hang-content-left-input-top-item">
+                        <label for=" ">Quận/Huyện<span style="color:red;">*</span></label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="giao hang-content-left-input-bottom">
+                    <label for=" ">Địa chỉ <span style="color:red;">*</span></label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="giao hang-content-right">
+                <div class="giao hang-content-right">
+                    <p> giá </p>
+                    <p> số lượng </p>
+                    <p>thành tiền</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
