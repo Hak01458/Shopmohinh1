@@ -1,0 +1,176 @@
+﻿<style type="text/css">
+    #container-shoppingcart {
+        justify-content: left;
+        display: flex;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+
+
+    .Price {
+        color: red;
+    }
+
+    .left img {
+        height: 500px;
+        width: 500px
+    }
+
+    .hinh img {
+        height: 50px;
+    }
+
+    .mid {
+        margin-left: 100px;
+        font-size: 30px;
+    }
+
+    .ProD {
+        font-size: 20px;
+    }
+
+    .buy-method {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        margin-block: 1rem;
+    }
+
+    .xacnhan {
+        background-color: deepskyblue;
+        text-decoration: none;
+        border-radius: 20px;
+        padding: 10px 20px; /* Thêm padding để tạo khoảng cách bên trong */
+        width: 600px; /* Đặt chiều rộng cụ thể */
+        text-align: center; /* Căn giữa nội dung */
+        display: inline-block; /* Cần thiết để chiều rộng hoạt động */
+        color: white;
+    }
+
+    .bottom p {
+        font-size: 20px;
+    }
+
+    #image-slider {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .slider img {
+        height: 600px; /* Chiều cao cho hình chính */
+        width: auto; /* Để giữ tỷ lệ */
+        border: 2px solid deepskyblue;
+        border-radius: 10px;
+    }
+
+    .thumbnails {
+        margin-top: 10px;
+    }
+
+        .thumbnails img {
+            height: 80px; /* Chiều cao cho hình thu nhỏ */
+            width: 80px; /* Chiều rộng cho hình thu nhỏ */
+            margin: 0 5px;
+            cursor: pointer;
+            border: 2px solid transparent; /* Biên mặc định */
+            border-radius: 5px;
+        }
+
+            .thumbnails img:hover {
+                border-color: deepskyblue; /* Biên khi hover */
+            }
+</style>
+
+@{
+
+
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<div id="container-shoppingcart">
+
+
+    <section id="image-slider">
+        <div class="slider">
+            <img id="slider-image" src="~/Content/img/ace.jpg" alt="Slider Image" />
+        </div>
+        <div class="thumbnails">
+            <img src="~/Content/img/ace1.jpg" onclick="changeImage('~/Content/img/ace1.jpg')" />
+            <img src="~/Content/img/ace2.jpg" onclick="changeImage('~/Content/img/ace2.jpg')" />
+            <img src="~/Content/img/ace3.jpg" onclick="changeImage('~/Content/img/ace3.jpg')" />
+            <img src="~/Content/img/ace4.jpg" onclick="changeImage('~/Content/img/ace4.jpg')" />
+            <img src="~/Content/img/ace5.jpg" onclick="changeImage('~/Content/img/ace5.jpg')" />
+        </div>
+
+
+    </section>
+    <script>
+        function changeImage(imageSrc) {
+            console.log("Changing image to:", imageSrc); // Kiểm tra đường dẫn
+            document.getElementById('slider-image').src = imageSrc;
+        }
+    </script>
+
+
+
+    <div class="mid">
+        <h3>Mô Hình ACE đứng nâng cầu có Led – Cao 39cm nặng 3kg1 – Box Carton</h3>
+
+        <p class="Price">
+            930.000<span>&#8363;  </span>
+        </p>
+        <p class="ProD">Phương thức mua hàng</p>
+        <div class="buy-method">
+            <input class="muahang" type="radio" name="muahang" id="muahang-thang" />
+            <label for="muahang-thang">Mua thẳng</label>
+        </div>
+        <div class="buy-method">
+            <input class="muahang" type="radio" name="muahang" id="muahang-tragop" />
+            <label for="muahang-tragop">Mua trả góp</label>
+        </div>
+        <a href="~/ShoppingCart/Shoppingcart" class="xacnhan">MUA NGAY</a>
+
+    </div>
+</div>
+<section>
+    <div class="bottom">
+        <h2>Mô tả</h2>
+        <p>
+            <span>&#9745;</span>Chất liệu: PVC
+        </p>
+        <p>
+            <span>&#9745;</span>Tình trạng: Còn mới
+        </p>
+        <p>
+            <span>&#9745;</span>Mục đích: Trang trí văn phòng, bàn làm việc, sưu tầm, trưng bày, quà tặng,…
+        </p>
+        <p>
+            <span>&#9745;</span>Kiểu giao hàng: Giao ngay/order
+        </p>
+        <p>
+            <span>&#9745;</span> Kiểu: cố định, không thể cử động
+        </p>
+        <p>
+            <span>&#9745;</span>Sản xuất: Hàng nội địa Trung Quốc
+        </p>
+        <p>
+            1. Mô Hình Figure – Nơi Uy Tín và Chất Lượng
+            Mô Hình Figure tự hào là địa chỉ hàng đầu trong lĩnh vực Manga – Anime, cung cấp đa dạng các mô hình figure và nenderoid từ các anime nổi tiếng như One Piece, Dragon Ball Z, Kimetsu no Yaiba, Naruto và nhiều anime khác. Với phương châm “hài lòng trước, nhận tiền sau”, chúng tôi cam kết giữ nguyên giá cố định và không đội giá theo thị trường, mang đến cho bạn sự minh bạch và tin cậy.
+        </p>
+        <p>
+            2. Sự Đa Dạng và Chất Lượng Sản Phẩm
+            Bạn sẽ dễ dàng tìm thấy những nhân vật yêu thích từ các bộ truyện như Naruto, Kimetsu no Yaiba,…, và cả các nhân vật khác trong Học Viện Siêu Anh Hùng My Hero Academia, Chú Thuật Hồi Chiến Jujutsu Kaisen, hay nhân vật trong game Genshin Impact,… Chúng tôi cam kết về chất lượng sản phẩm và luôn cập nhật các mẫu mới nhất để đáp ứng nhu cầu sưu tập của bạn.
+        </p>
+        <p>
+            3. Dịch Vụ Chuyên Nghiệp và Tiện Lợi
+            Đến với Mô Hình Figure, bạn sẽ được hưởng các dịch vụ tiện ích như ship COD toàn quốc, gói quà tặng miễn phí (chỉ tính giấy gói),… Chúng tôi luôn sẵn sàng phục vụ và hỗ trợ khách hàng một cách nhanh nhất để đảm bảo bạn có trải nghiệm mua sắm tuyệt vời.
+        </p>
+        <p>
+            4. Địa Điểm và Liên Hệ
+            Ghé thăm cửa hàng của Mô Hình Figure tại 206/34 Lý Thường Kiệt, Phường 14, Quận 10, TP.HCM hoặc truy cập link shop để cập nhật thông tin về các sản phẩm mới nhất và các chương trình khuyến mãi đặc biệt dành cho khách hàng thân thiết.
+
+            Chọn Mô Hình Figure là lựa chọn đúng đắn để thỏa mãn niềm đam mê sưu tập của bạn. Hãy đồng hành cùng chúng tôi và khám phá không gian đầy hứng khởi của những nhân vật yêu thích từ các bộ truyện tranh và phim hoạt hình bạn yêu thích!
+        </p>
+    </div>
+</section>

@@ -1,0 +1,179 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<style type="text/css">
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .birthday-select {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .birthday-select {
+        width: 30px;
+    }
+
+    input[type="tel"],
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+    .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 15px;
+    }
+    .register a {
+        color: blue;
+    }
+    #day{
+        margin-right:5rem;
+     
+    }
+    #month{
+        margin-right:5rem;
+    }
+   
+</style>
+<script>function validateForm() {
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+        const errorMessage = document.getElementById("error-message");
+
+        if (password !== confirmPassword) {
+            errorMessage.textContent = "Mật khẩu không khớp. Vui lòng nhập lại.";
+            return false;
+        } else {
+            errorMessage.textContent = ""; // Xóa thông báo lỗi
+        }
+        return true; // Được phép gửi biểu mẫu
+    }</script>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Đăng Ký Tài Khoản</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Đăng Ký Tài Khoản</h1>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Họ và tên:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="gioitinh">Giới tính</label>
+                <input type="radio" name="radGT" value="nam" />Nam
+                <input type="radio" name="radGT" value="nu" />Nữ
+                <input type="radio" name="radGT" value="khac" />Khác
+            </div>
+            <div class="form-group">
+                <label for="birthday">Ngày sinh</label>
+                <div class="birthday-select">
+                    <select id="day" name="day" required>
+                        <option value="">Ngày</option>
+                        <script>for (let i = 1; i <= 31; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }</script>
+                    </select>
+
+                    <select id="month" name="month" required>
+                        <option value="">Tháng</option>
+                        <!-- Tạo các tùy chọn cho tháng -->
+                        <script>for (let i = 1; i <= 12; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }</script>
+                    </select>
+
+                    <select id="year" name="year" required>
+                        <option value="">Năm</option>
+                        <!-- Tạo các tùy chọn cho năm (ví dụ từ 1900 đến hiện tại) -->
+                        <script>const currentYear = new Date().getFullYear();
+                            for (let i = currentYear; i >= 1900; i--) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }</script>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Điện thoại:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Xác nhận mật khẩu:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <div id="error-message" class="error"></div>
+            </div>
+            <button type="submit">Đăng Ký</button>
+            <div class="register">
+                Bạn đã có tài khoản?<a href="~/User/Login">Mời đăng nhập</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
