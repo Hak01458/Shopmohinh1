@@ -3,7 +3,7 @@
 }
 <style type="text/css">
     #banner {
-        background-image: url("../Content/img/nen.jpg");
+        background-image: url("../Content/img/nen1.jpg");
         background-size: cover;
         background-position: center;
         height: 50px;
@@ -17,6 +17,7 @@
     .banner-content {
         text-align: center;
         color: white;
+       margin-top:30rem;
     }
 
         .banner-content h2 {
@@ -47,7 +48,8 @@
     .proDContainer {
         display: flex;
         justify-content: center;
-        gap: 50px
+        gap: 50px ;
+       /* flex-wrap: wrap;*/
     }
 
     .product-item3 {
@@ -95,34 +97,6 @@
         font-weight: bold;
         font-size: 3rem;
     }
-
-    /* #futureProd {
-        text-align: center;
-    }
-
-    #futureProd h2{
-        font-size:2rem;
-        margin-bottom:20px;
-    }
-    .proDContainer {
-        display: flex;
-        justify-content: center;
-        gap: 20px
-    }
-    .product-item{
-        width:1200px;
-    }
-
-    .product-item h3{
-        font-size:25px;
-        color:black;
-        margin:10px 0px;
-    }*/
-    /*.prodDescription{
-        font:arial;
-        font-size:20px;
-        color:lightgreen;
-    }*/
     .prodPrice {
         font-size: 20px;
         color: green;
@@ -141,22 +115,7 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
-    /* .search-container {
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-    #search-input{
-        width:400px;
-        height:25px;
-        padding:10px;
-        border: 1px solid deepskyblue;
-        border-radius:5px 0 0 5px;
-    }
-    #search{
-        background-color:lightskyblue;
-
-    }*/
+ 
     .main-menu ul {
         list-style-type: none;
         display: flex;
@@ -188,12 +147,14 @@
     .list-container {
         display: flex;
         justify-content: center;
-        gap: 20px
+        gap: 20px;
+       /* flex-wrap: wrap;*/
     }
 
     .product-item {
         width: 400px;
-        
+        flex: 1;
+        box-sizing: border-box;
     }
 
         .product-item h2 {
@@ -214,7 +175,8 @@
         font-weight: bold;
     }
     .ace-img {
-        width: 200px; /* Thay đổi kích thước theo mong muốn */
+        max-width:100%;
+      /*  width: 100px; */ /*Thay đổi kích thước theo mong muốn */
         height: auto; /* Giữ tỷ lệ hình ảnh */
     }
     #futureProd{
@@ -281,7 +243,7 @@
     </div>
 </section>
 <section id="productList">
-    <h2>--------------------------------------------------------------Danh sách sản phẩm-----------------------------------------------------------------------</h2>
+    <h2>---------------------------------------------------------Danh sách sản phẩm------------------------------------------------------------------</h2>
     <input type="text" id="search-input" placeholder="Tìm kiếm những mô hình mà bạn yêu thích..." />
     <button id="search-button">Tìm kiếm</button>
     <ul class="list-container">
