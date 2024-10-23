@@ -1,16 +1,18 @@
 ﻿<style type="text/css">
     html {
         font-size: 14px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: /*'Franklin Gothic Medium', 'Arial Narrow'*/, Arial, sans-serif;
     }
 
     body {
-        background-color: whitesmoke  ;
+        background-color: whitesmoke;
     }
 
     #container {
         border: 2px solid deepskyblue;
         border-radius: 20px;
+        width: 1501px; /* Đặt chiều rộng cố định cho khung */
+        margin: 0 auto; /* Canh giữa trang */
     }
 
     header {
@@ -28,8 +30,8 @@
 
     .cart-count {
         position: absolute;
-        top: -50px;
-        left: 1090px;
+        top: -30px;
+        left: 120px;
         background-color: pink;
         color: white;
         font-size: 12px;
@@ -54,8 +56,7 @@
 
     ul li a {
         text-decoration: none;
-        color: #000000;
-        font-weight: bold;
+        color: #000;
     }
 
     section {
@@ -83,11 +84,6 @@
         <header>
             <div class="logo">
                 <a href="~/Home/trangchu"><img src="~/Content/img/logo.jpg" alt="logo" /></a>
-                <div class="Cart">
-                    <a href="~/Product/ShoppingCart">
-                        <span class="cart-count ">0</span>
-                    </a>
-                </div>
             </div>
             <nav>
                 FREE SHIPPING ON ALL ORDER. NO MINIMUM PURCHASE
@@ -97,16 +93,21 @@
                             <img src="~/Content/img/cart.jpg" />
                         </a>
                         <a href="~/ShoppingCart/ShoppingCart">Shopping Cart</a>
+                        <div class="Cart">
+                            <a href="~/Product/ShoppingCart">
+                                <span class="cart-count ">0</span>
+                            </a>
+                        </div>
                     </li>
                     <li>
                         <a href="#"><img src="~/Content/img/hearticon.jpg" /></a>
                         <a href="#">My Wishlist</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="~/User/Login">
                             <img src="~/Content/img/acconticon.jpg" />
                         </a>
-                        <a href="#">Sign or Create an account</a>
+                        <a href="~/User/Login">Sign or Create an account</a>
 
                 </ul>
 
@@ -116,9 +117,7 @@
 
             @RenderBody()
         </section>
-        <footer>
-            
-        </footer>
+       
 
 
     </div>
