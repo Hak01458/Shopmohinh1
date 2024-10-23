@@ -166,8 +166,10 @@
     <Content Include="Content\img\boa.png" />
     <Content Include="Content\img\cart.jpg" />
     <Content Include="Content\img\CartIcon.jpg" />
+    <Content Include="Content\img\fb.jpg" />
     <Content Include="Content\img\fi1.png" />
     <Content Include="Content\img\fi2.png" />
+    <Content Include="Content\img\gmail.jpg" />
     <Content Include="Content\img\go.png" />
     <Content Include="Content\img\goku.png" />
     <Content Include="Content\img\gow.jpg" />
@@ -178,6 +180,7 @@
     <Content Include="Content\img\gundame.jpg" />
     <Content Include="Content\img\hancok.png" />
     <Content Include="Content\img\hearticon.jpg" />
+    <Content Include="Content\img\ins.jpg" />
     <Content Include="Content\img\kai.png" />
     <Content Include="Content\img\lego.jpg" />
     <Content Include="Content\img\littlenightmare2.jpg" />
@@ -193,6 +196,7 @@
     <Content Include="Content\img\re4.jpg" />
     <Content Include="Content\img\thetd.jpg" />
     <Content Include="Content\img\vnpay.jpg" />
+    <Content Include="Content\img\x.jpg" />
     <Content Include="Content\img\zalopay.jpg" />
     <Content Include="Content\img\zo.png" />
     <Content Include="favicon.ico" />

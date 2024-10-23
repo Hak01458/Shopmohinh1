@@ -1,9 +1,10 @@
 ﻿<style type="text/css">
     html {
         font-size: 14px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       
+        font-family: /*'Franklin Gothic Medium', 'Arial Narrow',*/ Arial, sans-serif;
     }
-
+    
     body {
         background-color: whitesmoke;
     }
@@ -11,6 +12,8 @@
     #container {
         border: 2px solid deepskyblue;
         border-radius: 20px;
+        width: 1501px; /* Đặt chiều rộng cố định cho khung */
+        margin: 0 auto; /* Canh giữa trang */
     }
 
     header {
@@ -28,8 +31,8 @@
 
     .cart-count {
         position: absolute;
-        top: -50px;
-        left: 1090px;
+        top: -30px;
+        left: 130px;
         background-color: pink;
         color: white;
         font-size: 12px;
@@ -54,8 +57,8 @@
 
     ul li a {
         text-decoration: none;
-        color: #000000;
-        font-weight: bold;
+        color: #000;
+       
     }
 
     section {
@@ -70,12 +73,40 @@
     nav {
         text-align: right;
     }
+    .footer{
+        
+        display:flex;
+        justify-content:space-between;
+    }
+    .left1{
+        text-align:left;
+        font-size:15px;
+    }
+    .left2 {
+        text-align: left;
+        font-size: 15px;
+    }
+    .left3 {
+        text-align: left;
+        font-size: 15px;
+    }
+    .footer .logo1 img {
+        height: 30px; /* Chỉnh kích thước ảnh nhỏ lại */
+        margin: 0 5px; /* Khoảng cách giữa các ảnh */
+    }
+    .footer p {
+        margin: 5px 0; /* Tạo khoảng cách nhỏ giữa các chữ */
+    }
+    
 </style>
 <!DOCTYPE html>
 
-<html>
+<html lang="vi">
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -83,11 +114,6 @@
         <header>
             <div class="logo">
                 <a href="~/Home/trangchu"><img src="~/Content/img/logo.jpg" alt="logo" /></a>
-                <div class="Cart">
-                    <a href="~/Product/ShoppingCart">
-                        <span class="cart-count ">0</span>
-                    </a>
-                </div>
             </div>
             <nav>
                 FREE SHIPPING ON ALL ORDER. NO MINIMUM PURCHASE
@@ -97,6 +123,11 @@
                             <img src="~/Content/img/cart.jpg" />
                         </a>
                         <a href="~/ShoppingCart/ShoppingCart">Shopping Cart</a>
+                        <div class="Cart">
+                            <a href="~/Product/ShoppingCart">
+                                <span class="cart-count ">0</span>
+                            </a>
+                        </div>
                     </li>
                     <li>
                         <a href="#"><img src="~/Content/img/hearticon.jpg" /></a>
@@ -117,15 +148,45 @@
             @RenderBody()
         </section>
         <footer style="background-color: deepskyblue; color: white; padding: 20px; text-align: center; border-top: 5px solid #5486d7;">
-            <div>
-                <p>&copy; 2024 Mô Hình Figure. Tất cả quyền được bảo lưu.</p>
-                <nav>
-                    <a href="#" style="color: white; margin: 0 15px; text-decoration: none;">Chính Sách Bảo Mật</a>
-                    <a href="#" style="color: white; margin: 0 15px; text-decoration: none;">Điều Khoản Dịch Vụ</a>
-                    <a href="#" style="color: white; margin: 0 15px; text-decoration: none;">Liên Hệ Chúng Tôi</a>
-                </nav>
+          <div class="footer">
+              <div class="left1">
+                  <div class="logo">
+                      <a href="~/Home/trangchu"><img src="~/Content/img/logo.jpg" alt="logo" /></a>
+                  </div>
+                  <p style="font-weight: bold;">WEBSITE THUỘC QUYỀN SỞ HỮU:</p>
+                  <p>Mô hình Tedi - Shop mô hình anime giá rẻ</p>
+                  <p>Địa Chỉ: 206/34 Lý Thường Kiệt, Phường 14, Quận 10, HCM</p>
+                  <p>Hotline: 0923.867.916</p>
+                  <p>Email: <a href="mailto:mohinhfigure@gmail.com" style="color: white; text-decoration: none;">mohinhfigure@gmail.com</a></p>
+
+              </div>
+                <div class="left2">
+                    <p style="font-weight: bold;">Danh Mục Sản Phẩm</p>
+                        <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Mô Hình Anime</p>
+                        <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Nendoroid</p>
+                        <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Bộ figure</p>
+                </div>
+                <div class="left3">
+                    <p style="font-weight: bold;">Liên Hệ</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Chính sách bảo hành</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Chính sách đổi trả</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Chính sách vận chuyển</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Chính sách bảo mật</p>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <p style="font-weight: bold;">KẾT NỐI VỚI MÔ HÌNH Tedi</p>
+                    <!-- Bạn có thể thêm các biểu tượng mạng xã hội vào đây nếu cần -->
+                    <div class="logo1">
+                        <a href="~/Home/trangchu"><img src="~/Content/img/fb.jpg" alt="logo" /></a>
+                        <a href="~/Home/trangchu"><img src="~/Content/img/gmail.jpg" alt="logo" /></a>
+                        <a href="~/Home/trangchu"><img src="~/Content/img/x.jpg" alt="logo" /></a>
+                        <a href="~/Home/trangchu"><img src="~/Content/img/ins.jpg" alt="logo" /></a>
+                    </div>
+                </div>
             </div>
         </footer>
+
 
 
     </div>

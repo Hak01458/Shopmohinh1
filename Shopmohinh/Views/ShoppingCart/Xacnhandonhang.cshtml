@@ -1,5 +1,5 @@
 ﻿<style type="text/css">
-    h1 {
+   /* h1 {
         text-align: center;
         background-color: lightgrey;
         border-radius: 12px 12px 0 0;
@@ -11,14 +11,14 @@
         line-height: 20px;
         border-radius: 0;
         padding: 10px 0;
-    }
+    }*/
+   
 
     h2 {
         line-height: 21px;
-        color: rebeccapurple;
         padding: 15px 8px 15px 0;
         text-align: left;
-        font-size: 20px;
+        font-size: 18px;
         margin: 0;
     }
 
@@ -33,7 +33,7 @@
         font-size: 18px;
     }
 
-    .order-overview-content{
+    .order-overview-content {
         font-size: 20px;
         background-color: #f5f5f7;
         border-radius: 12px;
@@ -76,13 +76,15 @@
         text-align: center; /* Căn giữa nội dung */
         display: inline-block; /* Cần thiết để chiều rộng hoạt động */
         color: white;
-        margin-top:1rem;
+        margin-top: 1rem;
     }
-    .checkout-payment_options{
+
+    .checkout-payment_options {
         /*display:flex;
         justify-content:center;*/
-        font-size:20px;
+        font-size: 20px;
     }
+
     .section-order-summary {
         text-align: left;
         width: 700px;
@@ -90,38 +92,87 @@
         /*display:flex;*/
         margin: 0 auto;
     }
-    .checkout-data{
-        text-align:center;
+
+    .checkout-data {
+        text-align: center;
     }
-    .sectionorder-completed a{
-        text-decoration:none;
+
+    .sectionorder-completed a {
+        text-decoration: none;
     }
+
     .thanhtoan a {
         color: cornflowerblue;
         /*margin-bottom:6rem;*/ text-decoration: none;
-        font-size:15px;
+        font-size: 15px;
     }
+
     .thanhtoan {
         text-align: center;
-        margin-top: 1rem;
-        
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
+
     .gohome {
-       
         background-color: white;
         color: dodgerblue;
         padding: 10px 135px;
         border-radius: 20px;
         text-align: center;
-        margin:0 auto;
+        margin: 0 auto;
         text-decoration: none;
         border: 2px solid deepskyblue;
-        width:400px;
+        width: 400px;
     }
-    .ds_item_label img{
-        height:30px;
-        width:30px;
+
+    .ds_item_label img {
+        height: 30px;
+        width: 30px;
     }
+
+    .order-number {
+        margin-bottom: 1rem;
+    }
+
+    .name {
+        margin-block: 1rem;
+    }
+
+    .cart-total {
+        margin-block: 1rem;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom:3rem;
+    }
+    .note{
+        margin-top:1rem;
+    }
+    .page-title {
+        text-align:center;
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+        margin-bottom:-5rem;
+        color:lawngreen;
+    }
+    
 </style>
 
 @{
@@ -131,102 +182,108 @@
 
 
 
-
-<div  class="section-order-summary">
+<body>
     <div class="page-title">
         <h1> Đặt hàng thành công </h1>
     </div>
-    <h2 class="title">
-        Cảm ơn
-        <strong> bạn </strong>
-        đã cho Tedi Shop cơ hội được phục vụ thượng đế
-    </h2>
+    <div class="container">
+        <div class="section-order-summary">
 
-    <ul class="order-overview-content">
-        <li class="order-number">
-            <label>
-                Đơn hàng:
-                <span>#999999</span>
-            </label>
-        </li>
-        <li class="name">
-            <strong>Người nhận:</strong>
-            Nguyen Van a,SĐT:0987654321
-        </li>
-        <li class="cart-total">
-            <strong>Nhận tại:</strong>
-            trái đất năm 2100
-        </li>
-        <li class="cart-total">
-            <strong>Tổng tiền:</strong>
-            <strong>999.999$</strong>
-        </li>
+            <h2 class="title">
+                Cảm ơn bạn đã cho Tedi Shop cơ hội được phục vụ thượng đế
+            </h2>
 
-    </ul>
-
-    <h4 class="order-infor-alert">Đơn hàng chưa được thanh toán</h4>
-
-    <div class="left">
-        <div class="checkout-payment">
-            <h3 class="checkout-title">Phương thức thanh toán</h3>
-            <div class="block-border">
-                <p>Quý khách vui lòng lựa chọn các hình thức thanh toán dưới đây:</p>
-                <div class="checkout-payment_options">
-                    <label class="ds_item">
-                        <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_1" value="1" />
-                        <a class="ds_item_label">
-                            <img src="~/Content/img/thetd.jpg" />
-                            Thanh toán bằng thẻ tín dụng
-                        </a><br />
-
-                    </label>
-                    <label class="ds_item">
-                        <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_2" value="2" checked />
-                        <a class="ds_item_label">
-                            <img src="~/Content/img/vnpay.jpg" />
-                            Thanh toán bằng VNPay
-                        </a><br />
-                    </label>
-                    <label class="ds_item">
-                        <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_5" value="5" />
-                        <a class="ds_item_label">
-                            <img src="~/Content/img/momo.jpg" />
-                            Thanh toán bằng Momo
-                        </a><br />
-                    </label>
-                    <label class="ds_item">
-                        <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_3" value="3" />
-                        <a class="ds_item_label">
-                            <img src="~/Content/img/zalopay.jpg" />
-                            Thanh toán bằng ZaloPay
-                        </a><br />
-                    </label>
-                    <label class="ds_item">
-                        <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_3" value="3" />
-                        <a class="ds_item_label">
-                            Thanh toán khi giao hàng
-                        </a><br />
+            <div class="order-overview-content">
+                <div class="order-number">
+                    <label>
+                        Đơn hàng:
+                        <span>#999999</span>
                     </label>
                 </div>
-                <a href="#" class="xacnhan">xác nhận</a>
+                <div class="name">
+                    <a>Người nhận:</a>
+                    Nguyen Van a,SĐT:0987654321
+                </div>
+                <div class="cart-total">
+                    <a>Nhận tại:</a>
+                    trái đất năm 2100
+                </div>
+                <div class="cart-total1">
+                    <a>Tổng tiền:</a>
+                    <a>999.999$</a>
+                </div>
+
+            </div>
+
+            <h4 class="order-infor-alert">Đơn hàng chưa được thanh toán</h4>
+
+            <div class="left">
+                <div class="checkout-payment">
+                    <h3 class="checkout-title">Phương thức thanh toán</h3>
+                    <div class="block-border">
+                        <p>Quý khách vui lòng lựa chọn các hình thức thanh toán dưới đây:</p>
+                        <div class="checkout-payment_options">
+                            <label class="ds_item">
+                                <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_1" value="1" />
+                                <a class="ds_item_label">
+                                    <img src="~/Content/img/thetd.jpg" />
+                                    Thanh toán bằng thẻ tín dụng
+                                </a><br />
+
+                            </label>
+                            <label class="ds_item">
+                                <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_2" value="2" checked />
+                                <a class="ds_item_label">
+                                    <img src="~/Content/img/vnpay.jpg" />
+                                    Thanh toán bằng VNPay
+                                </a><br />
+                            </label>
+                            <label class="ds_item">
+                                <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_5" value="5" />
+                                <a class="ds_item_label">
+                                    <img src="~/Content/img/momo.jpg" />
+                                    Thanh toán bằng Momo
+                                </a><br />
+                            </label>
+                            <label class="ds_item">
+                                <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_3" value="3" />
+                                <a class="ds_item_label">
+                                    <img src="~/Content/img/zalopay.jpg" />
+                                    Thanh toán bằng ZaloPay
+                                </a><br />
+                            </label>
+                            <label class="ds_item">
+                                <input class="ds_item_input" type="radio" name="payment_method" id="payment_method_3" value="3" />
+                                <a class="ds_item_label">
+                                    Thanh toán khi giao hàng
+                                </a><br />
+                            </label>
+                        </div>
+                        <a href="#" class="xacnhan">xác nhận</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-data">
+                <div class="sectionorder-completed">
+                    <div class="note">
+                        Khi cần hỗ trợ vui lòng gọi
+                        <a style="color:#288ad6" href="tel:19006626" class="policy-phone-number">1900.6626</a>
+                        " (08:00 - 22:00)"
+                    </div>
+                    @*<div class="thanhtoan">
+                            <a href="#">Xem chính sách mua hàng</a>
+                            <p><a href="#">Quay về trang chủ</a></p>
+                        </div>*@
+                </div>
+            </div>
+            <div class="thanhtoan">
+                <a href="#">Xem chính sách mua hàng</a>
+            </div>
+            <div class="thanhtoan">
+                
+                <p class="gohome"><a href="~/Home/TrangChu">Quay về trang chủ</a></p>
             </div>
         </div>
     </div>
-</div>
-<div class="checkout-data">
-    <div class="sectionorder-completed">
-        <div class="note">
-            Khi cần hỗ trợ vui lòng gọi
-            <a style="color:#288ad6" href="tel:19006626" class="policy-phone-number">1900.6626</a>
-            " (08:00 - 22:00)"
-        </div>
-        @*<div class="thanhtoan">
-            <a href="#">Xem chính sách mua hàng</a>
-            <p><a href="#">Quay về trang chủ</a></p>
-        </div>*@
-    </div>
-</div>
-<div class="thanhtoan">
-    <a href="#">Xem chính sách mua hàng</a>
-    <p class="gohome"><a href="~/Home/TrangChu">Quay về trang chủ</a></p>
-</div>
+</body>
