@@ -136,7 +136,8 @@
 
     #productList {
         text-align: center;
-        margin-top:-34rem;
+        margin-top: -34rem;
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
     }
 
         #productList h2 {
@@ -146,10 +147,10 @@
 
     .list-container {
         display: flex;
-        justify-content: space-between; /* Tạo khoảng cách đều giữa các sản phẩm */
-        flex-wrap: wrap; /* Đảm bảo các sản phẩm sẽ xuống dòng khi không đủ không gian */
-        gap: 20px; /* Tạo khoảng cách giữa các sản phẩm */
-        align-items: flex-start; /* Đảm bảo tất cả các sản phẩm bắt đầu từ cùng một chiều cao */
+        justify-content: space-between; 
+        flex-wrap: wrap; 
+        gap: 20px; 
+        align-items: flex-start; 
     }
 
     .product-item {
@@ -238,6 +239,28 @@
         width:600px;
         height:25px;
     }
+    #SanphamNB {
+        text-align: center;
+        margin-top: -450px;
+        margin-bottom: 10rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+    .list-NB {
+        display: flex;
+        justify-content: space-between; 
+    /*    flex-wrap: wrap;*/
+/*        gap: 20px;*/ 
+        align-items: flex-start; 
+
+        
+
+    }
+    .product-NB a {
+        text-decoration: none;
+        color: black;
+        
+    }
+
 </style>
 <nav class="main-menu">
     <ul>
@@ -287,6 +310,35 @@
                 <p class="prodPrice">50.000d</p>*@
         </div>
     </div>
+</section>
+<section id="SanphamNB" class="SPNB">
+    <h2>Sản phẩm nổi bậc</h2>
+    <div class="List-NB">
+        <div class="product-NB">
+            <a href="~/Product/ProductDetail">
+                <img src="~/Content/img/ace.jpg" class="ace-img" />
+            </a>
+            <a href="~/Product/ProductDetail"><h3>Mô Hình ACE đứng nâng cầu có Led – Cao 39cm nặng 3kg1 – Box Carton</h3></a>
+          
+        </div>
+        <div class="product-NB">
+            <img src="~/Content/img/goku.png" class="ace-img" />
+            <h3>Mô Hình Songoku Ultra vô cực Có Led – Cao 29cm nặng 1400gr – Hộp Màu</h3>
+           
+        </div>
+        <div class="product-NB">
+            <img src="~/Content/img/naruto.png" class="ace-img" />
+            <h3>Mô hình Naruto Lục đạo Cửu Vĩ Rasengan – Cao 28cm Nặng 1,5kg – Có hộp màu</h3>
+          
+        </div>
+        <div class="product-NB">
+            <img src="~/Content/img/hancok.png" class="ace-img" />
+            <h3>Mô Hình Boa Hancock ngồi ghế – Cao 16cm nặng 1200gr – Hộp màu</h3>
+        
+        </div>
+
+    </div>
+    
 </section>
 <section id="productList">
     <h2>---------------------------------------------------------Danh sách sản phẩm------------------------------------------------------------------</h2>
