@@ -97,6 +97,15 @@
     .footer p {
         margin: 5px 0; /* Tạo khoảng cách nhỏ giữa các chữ */
     }
+    .task {
+        background-color:black;
+       height:25px;
+       margin-top:-1rem;
+    }
+    .main-menu ul li a{
+        color:white;
+    }
+
     
 </style>
 <!DOCTYPE html>
@@ -143,28 +152,42 @@
 
             </nav>
         </header>
+        <div class="task">
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="~/Product/ProductList">One Piece</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">LookBook</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
         <section>
 
             @RenderBody()
         </section>
         <footer style="background-color: deepskyblue; color: white; padding: 20px; text-align: center; border-top: 5px solid #5486d7;">
-          <div class="footer">
-              <div class="left1">
-                  <div class="logo">
-                      <a href="~/Home/trangchu"><img src="~/Content/img/logo.jpg" alt="logo" /></a>
-                  </div>
-                  <p style="font-weight: bold;">WEBSITE THUỘC QUYỀN SỞ HỮU:</p>
-                  <p>Mô hình Tedi - Shop mô hình anime giá rẻ</p>
-                  <p>Địa Chỉ: 206/34 Lý Thường Kiệt, Phường 14, Quận 10, HCM</p>
-                  <p>Hotline: 0923.867.916</p>
-                  <p>Email: <a href="mailto:mohinhfigure@gmail.com" style="color: white; text-decoration: none;">mohinhfigure@gmail.com</a></p>
+            <div class="footer">
+                <div class="left1">
+                    <div class="logo">
+                        <a href="~/Home/trangchu"><img src="~/Content/img/logo.jpg" alt="logo" /></a>
+                    </div>
+                    <p style="font-weight: bold;">WEBSITE THUỘC QUYỀN SỞ HỮU:</p>
+                    <p>Mô hình Tedi - Shop mô hình anime giá rẻ</p>
+                    <p>Địa Chỉ: 206/34 Lý Thường Kiệt, Phường 14, Quận 10, HCM</p>
+                    <p>Hotline: 0923.867.916</p>
+                    <p>Email: <a href="mailto:mohinhfigure@gmail.com" style="color: white; text-decoration: none;">mohinhfigure@gmail.com</a></p>
 
-              </div>
+                </div>
                 <div class="left2">
                     <p style="font-weight: bold;">Danh Mục Sản Phẩm</p>
-                        <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Mô Hình Anime</p>
-                        <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Nendoroid</p>
-                        <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Bộ figure</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Mô Hình Anime</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Nendoroid</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Bộ figure</p>
                 </div>
                 <div class="left3">
                     <p style="font-weight: bold;">Liên Hệ</p>
@@ -179,10 +202,10 @@
                     <p style="font-weight: bold;">KẾT NỐI VỚI MÔ HÌNH Tedi</p>
                     <!-- Bạn có thể thêm các biểu tượng mạng xã hội vào đây nếu cần -->
                     <div class="logo1">
-                        <a href="~/Home/trangchu"><img src="~/Content/img/fb.jpg" alt="logo" /></a>
-                        <a href="~/Home/trangchu"><img src="~/Content/img/gmail.jpg" alt="logo" /></a>
+                        <a href="https://www.facebook.com/profile.php?id=100061974022081"><img src="~/Content/img/fb.jpg" alt="logo" /></a>
+                        <a href="https://mail.google.com/mail/u/0/?hl=vi#inbox"><img src="~/Content/img/gmail.jpg" alt="logo" /></a>
                         <a href="~/Home/trangchu"><img src="~/Content/img/x.jpg" alt="logo" /></a>
-                        <a href="~/Home/trangchu"><img src="~/Content/img/ins.jpg" alt="logo" /></a>
+                        <a href="https://www.instagram.com/katori01458/"><img src="~/Content/img/ins.jpg" alt="logo" /></a>
                     </div>
                 </div>
             </div>

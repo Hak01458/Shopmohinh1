@@ -1,0 +1,270 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<style type="text/css">
+    .taskhome{
+        text-align:center;
+        margin-right:60rem;
+        margin-top:1rem;
+        
+    }
+    .taskhome a{
+        text-decoration:none;
+        color:black;
+    }
+    .topbanner{
+        text-align:center;
+        font-size:30px;
+        font-weight:bold;
+    }
+    #banneronepiece {
+        background-image: url("../Content/img/nenonepiece1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        width:1000px;
+        /*display: flex;
+        align-content: center;*/
+         justify-content: center;
+        color: white;
+        border-radius:15px;
+        margin: 0 auto;
+    }
+    .allitem {
+        justify-content: space-between;
+        display: flex;
+        width: 900px;
+        margin: 0 auto;
+        /*margin-bottom:100px;*/
+        margin-top:3rem;
+    }
+   /* .item-list img {
+        height: 200px;
+        
+        
+    }
+    .item-list1 img {
+        height: 200px;
+        
+    }
+    .item-list2 img {
+        height: 200px;
+       
+    }
+    .item-list3 img {
+        height: 200px;
+        
+    }
+    .item-list {
+        box-shadow: 0 5px 40px rgb(0, 0, 0, 0.1);
+        margin-right: 2rem;
+        
+    }
+    .item-list1 {
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+    }
+    .item-list2 {
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+    }
+    .item-list3 {
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+    }
+*/
+    .item-list, .item-list1, .item-list2, .item-list3 {
+        width: 220px; /* Đặt chiều rộng cố định cho các ô */
+        height: 300px; /* Đặt chiều cao cố định cho các ô */
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height:350px;
+    }
+        .item-list img, .item-list1 img, .item-list2 img, .item-list3 img {
+            width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+            height: auto; /* Tự động co dãn theo chiều rộng */
+            max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+            object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+        }
+</style>
+<div class="taskhome">
+    <a href="~/Home/TrangChu">Trang chủ</a><span>&#62; One Piece </span>  
+</div>
+<div class="topbanner">
+    One Piece
+</div>
+<div id="banneronepiece">
+   
+
+</div>
+<section class="AllList">
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/zo.png" />
+            <p>Mô hình figure: Zoro Chiến Đấu Chân Lửa – 2 Mặt</p>
+            <p>Giá:</p>
+            <p>240.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/lu.png" />
+            <p>Mô hình figure: Luffy Tay Lửa</p>
+            <p>Giá:</p>
+            <p>345.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/lu1.png" />
+            <p>Mô hình figure: Luffy Gear 5 Tay Đỏ – GK</p>
+            <p>Giá:</p>
+            <p>240.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/boa.png" />
+            <p>Mô hình figure: Zoro Chiến Đấu Chân Lửa – 2 Mặt</p>
+            <p>Giá:</p>
+            <p>465.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/ace1.png" />
+            <p>Mô Hình Ace hoả quyền trạng thái chiến đấu base đẹp – Cao 20cm Ngang 26cm Nặng 800gr – Có box</p>
+            <p>Giá:</p>
+            <p>410.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/3.png" />
+            <p>Mô Hình Bộ 3 Luffy Zoro Sanji AI ChiBi – Cao 13cm nặng 200gr – No box</p>
+            <p>Giá:</p>
+            <p>310.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/4.png" />
+            <p>Mô hình bộ 4 trạng thái Luffy chiến đấu – Cao 9-14cm nặng 500gr – No box</p>
+            <p>Giá:</p>
+            <p>350.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/5.png" />
+            <p>Mô Hình Kaido dạng lai rồng trạng thái chiến đấu – Cao 26cm nặng 1.7kg – Hộp màu</p>
+            <p>Giá:</p>
+            <p>510.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/6.png" />
+            <p>Mô hình 6 nhân vật One Piece Luffy Ussop Franky Kid Boa Law – Cao 7cm nặng 500gr – No Box</p>
+            <p>Giá:</p>
+            <p>350.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/7.png" />
+            <p>Mô Hình ACE Hỏa Quyền dáng đứng – Cao 36cm nặng 1500gr – Box màu</p>
+            <p>Giá:</p>
+            <p>350.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/8.png" />
+            <p>Mô Hình Luffy chiến đấu – Cao 27cm ngang 25cm nặng 400gr – Có hộp màu</p>
+            <p>Giá:</p>
+            <p>800.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/9.png" />
+            <p>Mô hình Luffy dáng đứng đội mũ – Cao 24cm nặng 500gr – No Box</p>
+            <p>Giá:</p>
+            <p>200.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/10.png" />
+            <p>Mô Hình Luffy gear 5 áo trắng dáng đứng – Cao 23cm nặng 380gr – Hộp màu</p>
+            <p>Giá:</p>
+            <p>260.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/11.png" />
+            <p>Mô Hình Luffy gear 5 chiến đấu và đấm đất – Cao 23cm nặng 830g – Có hộp</p>
+            <p>Giá:</p>
+            <p>380.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/12.png" />
+            <p>
+                Mô Hình Luffy gear 5 dáng đứng tay cầm sét Đế Trong – Cao 24cm Nặng 400gr – Box màu
+            </p>
+            <p>Giá:</p>
+            <p>300.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/13.png" />
+            <p>
+                Mô hình Luffy gear 5 đứng đá tay cầm sét – Cao 28cm nặng 600gr – Hộp Carton
+            </p>
+            <p>Giá:</p>
+            <p>350.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/14.png" />
+            <p>Mô Hình Luffy gear 5 và Zoro Enma Đại Chiến Kaido Rồng – Cao 20cm ngang 15cm Nặng 350gr – Box Màu</p>
+            <p>Giá:</p>
+            <p>340.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/15.png" />
+            <p>Mô Hình Luffy và Law chiến đấu Doflamingo – Cao 20cm nặng 1,5kg – Box màu</p>
+            <p>Giá:</p>
+            <p>430.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/16.png" />
+            <p>Mô hình Luffy và Zoro chibi ngồi siêu dễ thương – Cao 11cm nặng 350g – No Box</p>
+            <p>Giá:</p>
+            <p>166.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/17.png" />
+            <p>Mô Hình Râu đen chiến đấu – Cao 22cm ngang 23cm nặng 1kg – Hộp màu</p>
+            <p>Giá:</p>
+            <p>480.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/18.png" />
+            <p>
+                Mô Hình Zoro AI chibi – Cao 15cm nặng 300gr – Hộp Màu
+            </p>
+            <p>Giá:</p>
+            <p>200.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/19.png" />
+            <p>Mô Hình Zoro Cửu Kiếm Đứng Trên Lốc Xoáy – Cao 35cm nặng 1kg3 – Hộp màu</p>
+            <p>Giá:</p>
+            <p>510.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/20.png" />
+            <p>Mô Hình Zoro dáng đứng cầm kiếm – Cao 24cm nặng 450gr – Hộp màu</p>
+            <p>Giá:</p>
+            <p>260.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/21.png" />
+            <p>Mô Hình Luffy gear 4 king fado siêu đẹp – Cao 33cm, nặng 2kg8 – Hộp màu đẹp </p>
+            <p>Giá:</p>
+            <p>837.000<span>&#8363;</span></p>
+        </div>
+    </div>
+</section>
+ 
