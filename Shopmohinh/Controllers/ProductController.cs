@@ -25,5 +25,9 @@ namespace Shopmohinh.Controllers
         {
             return View();
         }
+        public ActionResult ProductList()
+        {
+            return View();
+        }
     }
 }

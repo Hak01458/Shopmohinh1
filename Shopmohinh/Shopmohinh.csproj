@@ -146,13 +146,33 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\img\10.png" />
+    <Content Include="Content\img\11.png" />
+    <Content Include="Content\img\12.png" />
+    <Content Include="Content\img\13.png" />
+    <Content Include="Content\img\14.png" />
+    <Content Include="Content\img\15.png" />
+    <Content Include="Content\img\16.png" />
+    <Content Include="Content\img\17.png" />
+    <Content Include="Content\img\18.png" />
+    <Content Include="Content\img\19.png" />
     <Content Include="Content\img\1a.png" />
     <Content Include="Content\img\1b.png" />
     <Content Include="Content\img\1c.png" />
     <Content Include="Content\img\1d.png" />
+    <Content Include="Content\img\20.png" />
+    <Content Include="Content\img\21.png" />
+    <Content Include="Content\img\3.png" />
+    <Content Include="Content\img\4.png" />
+    <Content Include="Content\img\5.png" />
+    <Content Include="Content\img\6.png" />
+    <Content Include="Content\img\7.png" />
+    <Content Include="Content\img\8.png" />
+    <Content Include="Content\img\9.png" />
     <Content Include="Content\img\acconticon.jpg" />
     <Content Include="Content\img\ace.jpg" />
     <Content Include="Content\img\ace1.jpg" />
+    <Content Include="Content\img\ace1.png" />
     <Content Include="Content\img\ace2.jpg" />
     <Content Include="Content\img\ace3.jpg" />
     <Content Include="Content\img\ace4.jpg" />
@@ -192,6 +212,8 @@
     <Content Include="Content\img\naruto.png" />
     <Content Include="Content\img\nen.jpg" />
     <Content Include="Content\img\nen1.jpg" />
+    <Content Include="Content\img\nenonepiece.jpg" />
+    <Content Include="Content\img\nenonepiece1.jpg" />
     <Content Include="Content\img\re2.jpg" />
     <Content Include="Content\img\re4.jpg" />
     <Content Include="Content\img\thetd.jpg" />
@@ -243,6 +265,7 @@
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\ShoppingCart\ShoppingCart.cshtml" />
     <Content Include="Views\ShoppingCart\Xacnhandonhang.cshtml" />
+    <Content Include="Views\Product\ProductList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
