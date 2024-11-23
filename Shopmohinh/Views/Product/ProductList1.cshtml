@@ -1,0 +1,256 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<style type="text/css">
+    .taskhome {
+        text-align: center;
+        margin-right: 60rem;
+        margin-top: 1rem;
+    }
+
+        .taskhome a {
+            text-decoration: none;
+            color: black;
+        }
+
+    .topbanner {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #banneronepiece {
+        background-image: url("../Content/img/nar.jpe");
+        background-size: cover;
+        background-position: center;
+        height: 430px;
+        width: 1000px;
+        justify-content: center;
+        color: white;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+
+    .allitem {
+        justify-content: space-between;
+        display: flex;
+        width: 900px;
+        margin: 0 auto;
+        /*margin-bottom:100px;*/
+        margin-top: 3rem;
+    }
+
+    .item-list, .item-list1, .item-list2, .item-list3 {
+        width: 220px; /* Đặt chiều rộng cố định cho các ô */
+        height: 300px; /* Đặt chiều cao cố định cho các ô */
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 350px;
+    }
+
+        .item-list img, .item-list1 img, .item-list2 img, .item-list3 img {
+            width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+            height: auto; /* Tự động co dãn theo chiều rộng */
+            max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+            object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+        }
+</style>
+<div class="taskhome">
+    <a href="~/Home/TrangChu">Trang chủ</a><span>&#62; Naruto </span>
+</div>
+<div class="topbanner">
+    Naruto
+</div>
+<div id="banneronepiece">
+
+
+</div>
+<section class="AllList">
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/nar1.jpg" />
+            <p>Mô Hình Sasuke dáng đứng</p>
+            <p>Giá:</p>
+            <p>480.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/nar2.jpg" />
+            <p>Mô hình Naruto Lục đạo Cửu Vĩ Rasengan</p>
+            <p>Giá:</p>
+            <p>430.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/nar3.jpg" />
+            <p>Mô Hình Minato dáng đứng siêu ngầu</p>
+            <p>Giá:</p>
+            <p>390.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/nar4.jpg" />
+            <p>Mô Hình Obito dáng đứng</p>
+            <p>Giá:</p>
+            <p>495.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/nar5.jpg" />
+            <p> Mô Hình Naruto Cửu Vĩ – Cao 22cm nặng 300gr – Box Màu </p>
+            <p>Giá:</p>
+            <p>410.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/nar6.jpg" />
+            <p>Mô Hình Pain Akatsuki – Cao 26,5cm rộng 18cm nặng 1kg6 – Hộp màu</p>
+            <p>Giá:</p>
+            <p>520.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/nar7.jpg" />
+            <p>
+                Mô hình Guy bát môn độn giáp Chibi – Cao 11cm, rộng 8cm, nặng 160gr – Có hộp màu
+            </p>
+            <p>Giá:</p>
+            <p>510.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/nar8.jpg" />
+            <p>Mô hình Sasuke Nguyền Ấn Trạng Thái Chiến Đấu – Cao 29cm nặng 500gr – Có Hộp màu</p>
+            <p>Giá:</p>
+            <p>480.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/nar9.jpg" />
+            <p>Mô hình Itachi Akatsuki – Cao 35cm ngang 27cm nặng 1kg7 – No Box</p>
+            <p>Giá:</p>
+            <p>465.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/nar10.jpg" />
+            <p>
+                Mô Hình Hokage Minato Phong ấn cửa vĩ – Cao 28cm, rộng 16cm, nặng 1kg5 – Có hộp màu
+            </p>
+            <p>Giá:</p>
+            <p>750.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/nar11.jpg" />
+            <p>Mô Hình Uchiha Obito Lục Đạo Cao 27cm Trang Trí Bàn Học</p>
+            <p>Giá:</p>
+            <p>600.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/nar12.jpg" />
+            <p>
+                Mô Hình Naruto Trạng Thái Hiền Nhân Thuật Với 2 Sư Phụ Cóc
+            </p>
+            <p>Giá:</p>
+            <p>400.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/nar13.png" />
+            <p>Mô Hình Boruto Trang Trí Bàn Học Làm Việc Cao 24cm nặng 500gr</p>
+            <p>Giá:</p>
+            <p>460.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/nar14.png" />
+            <p>Mô Hình Hokage Đệ Nhất Hashirama Senju – Cao 28cm nặng 1,1kg – Có box</p>
+            <p>Giá:</p>
+            <p>480.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/nar15.jpg" />
+            <p>
+                Mô Hình Hokage Đệ Nhị Tobirama Senju Cao 30cm Trang Trí Bàn Học
+            </p>
+            <p>Giá:</p>
+            <p>400.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/nar16.jpg" />
+            <p>
+                Mô Hình Kakashi Ninja World Wars Cầm Đao Cực Ngầu Cao 13cm nặng 400gr
+            </p>
+            <p>Giá:</p>
+            <p>450.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/nar17.png" />
+            <p>
+                Mô Hình Hokage Đệ Ngũ Tsunade Senju – Cao 30cm, nặng 1,1kg – Có box
+            </p>
+            <p>Giá:</p>
+            <p>340.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/nar18.png" />
+            <p>Mô Hình Hokage Đệ Thập Uzumaki Naruto Cao 30cm Trang Trí Bàn Làm Việc</p>
+            <p>Giá:</p>
+            <p>530.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/nar19.png" />
+            <p>Mô Hình Hokaghe Đệ Tam Hiruzen Sarutobi – Cao 30cm nặng 1,1kg – Có box</p>
+            <p>Giá:</p>
+            <p>466.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/nar20.png" />
+            <p>Mô Hình Hokage Đệ Lục Hatake Kakashi – Cao 30cm nặng 1,1kg – Có box</p>
+            <p>Giá:</p>
+            <p>450.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/nar21.jpg" />
+            <p>
+                Mô hình Naruto Bán Thân Uchiha Shisui – Cao 14cm, nặng 200gr – Có Hộp Màu
+
+            </p>
+            <p>Giá:</p>
+            <p>350.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/nar22.jpg" />
+            <p>Mô hình Bán Thân Uchiha Obito – Cao 15cm, nặng 200gr – Có Hộp Màu</p>
+            <p>Giá:</p>
+            <p>510.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/nar23.jpg" />
+            <p>
+                Mô Hình Itachi Uế Thổ Chuyển Sinh Cao 28cm Nặng 1.5kg Có Box
+            </p>
+            <p>Giá:</p>
+            <p>310.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/nar24.jpg" />
+            <p>Mô Hình Đội Hình Akatsuki Chibi Hàng Siêu Cấp – Cao 8-9cm – No Box</p>
+            <p>Giá:</p>
+            <p>517.000<span>&#8363;</span></p>
+        </div>
+    </div>
+</section>
+
+
+
+

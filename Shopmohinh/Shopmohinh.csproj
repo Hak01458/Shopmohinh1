@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -45,10 +46,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,13 +135,69 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CustomersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrdersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\Cart.cs" />
+    <Compile Include="Models\ViewModel\CartItem.cs" />
+    <Compile Include="Models\ViewModel\CartService.cs" />
+    <Compile Include="Models\ViewModel\CheckoutVM.cs" />
+    <Compile Include="Models\ViewModel\HomeProductVM.cs" />
+    <Compile Include="Models\ViewModel\LoginVM.cs" />
+    <Compile Include="Models\ViewModel\ProductDetailsVM.cs" />
+    <Compile Include="Models\ViewModel\ProductSearchVM.cs" />
+    <Compile Include="Models\ViewModel\ProfileVM.cs" />
+    <Compile Include="Models\ViewModel\RegisterVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -170,6 +241,7 @@
     <Content Include="Content\img\8.png" />
     <Content Include="Content\img\9.png" />
     <Content Include="Content\img\acconticon.jpg" />
+    <Content Include="Content\img\accounticon.jpg" />
     <Content Include="Content\img\ace.jpg" />
     <Content Include="Content\img\ace1.jpg" />
     <Content Include="Content\img\ace1.png" />
@@ -182,10 +254,30 @@
     <Content Include="Content\img\anime.jpg" />
     <Content Include="Content\img\anime1.jpg" />
     <Content Include="Content\img\asscred.jpg" />
+    <Content Include="Content\img\bleach1.jpg" />
+    <Content Include="Content\img\bleach10.jpg" />
+    <Content Include="Content\img\bleach11.jpg" />
+    <Content Include="Content\img\bleach12.jpg" />
+    <Content Include="Content\img\bleach13.jpg" />
+    <Content Include="Content\img\bleach14.jpg" />
+    <Content Include="Content\img\bleach15.jpg" />
+    <Content Include="Content\img\bleach16.jpg" />
+    <Content Include="Content\img\bleach17.jpg" />
+    <Content Include="Content\img\bleach18.jpg" />
+    <Content Include="Content\img\bleach2.jpg" />
+    <Content Include="Content\img\bleach3.jpg" />
+    <Content Include="Content\img\bleach4.jpg" />
+    <Content Include="Content\img\bleach5.jpg" />
+    <Content Include="Content\img\bleach6.jpg" />
+    <Content Include="Content\img\bleach7.jpg" />
+    <Content Include="Content\img\bleach8.jpg" />
+    <Content Include="Content\img\bleachnen.jpg" />
     <Content Include="Content\img\blmwk.jpg" />
     <Content Include="Content\img\boa.png" />
     <Content Include="Content\img\cart.jpg" />
     <Content Include="Content\img\CartIcon.jpg" />
+    <Content Include="Content\img\carticon1.jpg" />
+    <Content Include="Content\img\drgon.png" />
     <Content Include="Content\img\fb.jpg" />
     <Content Include="Content\img\fi1.png" />
     <Content Include="Content\img\fi2.png" />
@@ -200,6 +292,8 @@
     <Content Include="Content\img\gundame.jpg" />
     <Content Include="Content\img\hancok.png" />
     <Content Include="Content\img\hearticon.jpg" />
+    <Content Include="Content\img\HG ariel.jpg" />
+    <Content Include="Content\img\HIRM Astray.jpg" />
     <Content Include="Content\img\ins.jpg" />
     <Content Include="Content\img\kai.png" />
     <Content Include="Content\img\lego.jpg" />
@@ -208,28 +302,175 @@
     <Content Include="Content\img\logo.jpg" />
     <Content Include="Content\img\lu.png" />
     <Content Include="Content\img\lu1.png" />
+    <Content Include="Content\img\MG Astray blue frame.jpg" />
+    <Content Include="Content\img\MG Astray.jpg" />
+    <Content Include="Content\img\MG Deathscythe.jpg" />
+    <Content Include="Content\img\MG Epyon.jpg" />
+    <Content Include="Content\img\MG Exia.jpg" />
+    <Content Include="Content\img\MG force impulse.jpg" />
+    <Content Include="Content\img\MG Ginn Gladiator.jpg" />
+    <Content Include="Content\img\MG Infinite justice.jpg" />
+    <Content Include="Content\img\MG Lightning Strike Gundam Ver. RM.jpg" />
+    <Content Include="Content\img\MG Sandrock.jpg" />
+    <Content Include="Content\img\MG Sazabi.jpg" />
+    <Content Include="Content\img\MG Strike freedom.jpg" />
+    <Content Include="Content\img\MG Unicorn fm.jpg" />
+    <Content Include="Content\img\MG Unicorn.jpg" />
+    <Content Include="Content\img\MG Wing gundam SN.jpg" />
+    <Content Include="Content\img\MG Wing gundam.jpg" />
+    <Content Include="Content\img\mh1.png" />
+    <Content Include="Content\img\mh10.png" />
+    <Content Include="Content\img\mh11.png" />
+    <Content Include="Content\img\mh12.png" />
+    <Content Include="Content\img\mh13.png" />
+    <Content Include="Content\img\mh14.png" />
+    <Content Include="Content\img\mh15.png" />
+    <Content Include="Content\img\mh16.png" />
+    <Content Include="Content\img\mh17.png" />
+    <Content Include="Content\img\mh18.png" />
+    <Content Include="Content\img\mh19.png" />
+    <Content Include="Content\img\mh2.png" />
+    <Content Include="Content\img\mh20.png" />
+    <Content Include="Content\img\mh21.png" />
+    <Content Include="Content\img\mh22.png" />
+    <Content Include="Content\img\mh23.png" />
+    <Content Include="Content\img\mh24.png" />
+    <Content Include="Content\img\mh3.png" />
+    <Content Include="Content\img\mh4.png" />
+    <Content Include="Content\img\mh5.png" />
+    <Content Include="Content\img\mh6.png" />
+    <Content Include="Content\img\mh7.png" />
+    <Content Include="Content\img\mh8.png" />
+    <Content Include="Content\img\mh9.png" />
     <Content Include="Content\img\momo.jpg" />
+    <Content Include="Content\img\nar.jpe" />
+    <Content Include="Content\img\nar1.jpg" />
+    <Content Include="Content\img\nar10.jpg" />
+    <Content Include="Content\img\nar11.jpg" />
+    <Content Include="Content\img\nar12.jpg" />
+    <Content Include="Content\img\nar13.png" />
+    <Content Include="Content\img\nar14.png" />
+    <Content Include="Content\img\nar15.jpg" />
+    <Content Include="Content\img\nar16.jpg" />
+    <Content Include="Content\img\nar17.png" />
+    <Content Include="Content\img\nar18.png" />
+    <Content Include="Content\img\nar19.png" />
+    <Content Include="Content\img\nar2.jpg" />
+    <Content Include="Content\img\nar20.png" />
+    <Content Include="Content\img\nar21.jpg" />
+    <Content Include="Content\img\nar22.jpg" />
+    <Content Include="Content\img\nar23.jpg" />
+    <Content Include="Content\img\nar24.jpg" />
+    <Content Include="Content\img\nar3.jpg" />
+    <Content Include="Content\img\nar4.jpg" />
+    <Content Include="Content\img\nar5.jpg" />
+    <Content Include="Content\img\nar6.jpg" />
+    <Content Include="Content\img\nar7.jpg" />
+    <Content Include="Content\img\nar8.jpg" />
+    <Content Include="Content\img\nar9.jpg" />
     <Content Include="Content\img\naruto.png" />
     <Content Include="Content\img\nen.jpg" />
     <Content Include="Content\img\nen1.jpg" />
+    <Content Include="Content\img\nengundam.jpg" />
     <Content Include="Content\img\nenonepiece.jpg" />
     <Content Include="Content\img\nenonepiece1.jpg" />
+    <Content Include="Content\img\PG Unicorn.jpg" />
+    <Content Include="Content\img\posterbanner3.jpg" />
+    <Content Include="Content\img\quy1.jpg" />
+    <Content Include="Content\img\quy10.png" />
+    <Content Include="Content\img\quy11.jpg" />
+    <Content Include="Content\img\quy12.png" />
+    <Content Include="Content\img\quy13.jpg" />
+    <Content Include="Content\img\quy14.png" />
+    <Content Include="Content\img\quy15.jpg" />
+    <Content Include="Content\img\quy16.jpg" />
+    <Content Include="Content\img\quy17.jpg" />
+    <Content Include="Content\img\quy18.jpg" />
+    <Content Include="Content\img\quy19.jpg" />
+    <Content Include="Content\img\quy2.jpg" />
+    <Content Include="Content\img\quy20.jpg" />
+    <Content Include="Content\img\quy21.jpg" />
+    <Content Include="Content\img\quy22.jpg" />
+    <Content Include="Content\img\quy23.jpg" />
+    <Content Include="Content\img\quy24.jpg" />
+    <Content Include="Content\img\quy25.jpg" />
+    <Content Include="Content\img\quy26.jpg" />
+    <Content Include="Content\img\quy3.jpg" />
+    <Content Include="Content\img\quy4.jpg" />
+    <Content Include="Content\img\quy5.jpg" />
+    <Content Include="Content\img\quy6.jpg" />
+    <Content Include="Content\img\quy7.jpg" />
+    <Content Include="Content\img\quy8.jpg" />
+    <Content Include="Content\img\quy9.jpg" />
     <Content Include="Content\img\re2.jpg" />
     <Content Include="Content\img\re4.jpg" />
+    <Content Include="Content\img\remove.jpg" />
+    <Content Include="Content\img\RG Astray.jpg" />
+    <Content Include="Content\img\RG Unicorn.jpg" />
     <Content Include="Content\img\thetd.jpg" />
     <Content Include="Content\img\vnpay.jpg" />
     <Content Include="Content\img\x.jpg" />
     <Content Include="Content\img\zalopay.jpg" />
     <Content Include="Content\img\zo.png" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\PV_CreateEditCategories.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\PV_CreateEditProducts.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\PV_DetailDeteleProducts.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\PVListProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Orders\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Orders\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Orders\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Orders\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Orders\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -266,10 +507,29 @@
     <Content Include="Views\ShoppingCart\ShoppingCart.cshtml" />
     <Content Include="Views\ShoppingCart\Xacnhandonhang.cshtml" />
     <Content Include="Views\Product\ProductList.cshtml" />
+    <Content Include="Views\ShoppingCart\HistoryShopping.cshtml" />
+    <Content Include="Views\Product\ProductList1.cshtml" />
+    <Content Include="Views\Product\ProductList2.cshtml" />
+    <Content Include="Views\Product\ProductList3.cshtml" />
+    <Content Include="Views\Product\ProductList4.cshtml" />
+    <Content Include="Views\Product\ProductList5.cshtml" />
+    <Content Include="Views\Home\LienHe.cshtml" />
+    <Content Include="Views\Home\PVFeatureProduct.cshtml" />
+    <Content Include="Views\Home\PVNewProduct.cshtml" />
+    <Content Include="Views\Home\ProductDetails.cshtml" />
+    <Content Include="Views\Home\_PVRelatedProduct.cshtml" />
+    <Content Include="Views\Home\_PVTopProduct.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Order\Checkout.cshtml" />
+    <Content Include="Views\Order\OrderSuccess.cshtml" />
+    <Content Include="Views\Shared\_MasterLayut2.cshtml" />
+    <Content Include="Views\Account\ProfileAccount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Areas\Admin\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -297,6 +557,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -331,7 +594,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

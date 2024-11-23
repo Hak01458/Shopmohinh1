@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Shopmohinh.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Người dùng</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+           Mật khẩu
+        </th>
+        <th>
+           Khách hàng
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserRole)
+        </td>
+        <td>
+            @Html.ActionLink("sửa", "Edit", new { id=item.Username }, new {@class = "btn btn-primary"}) 
+          
+            @Html.ActionLink("xóa", "Delete", new { id=item.Username }, new { @class = "btn btn-primary" })
+        </td>
+    </tr>
+}
+
+</table>

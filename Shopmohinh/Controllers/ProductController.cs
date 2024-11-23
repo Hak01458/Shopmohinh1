@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList.Mvc;
+using Shopmohinh.Models.ViewModel;
+using Shopmohinh.Models;
 
 namespace Shopmohinh.Controllers
 {
@@ -26,6 +29,26 @@ namespace Shopmohinh.Controllers
             return View();
         }
         public ActionResult ProductList()
+        {
+            return View();
+        }
+        public ActionResult ProductList1()
+        {
+            return View();
+        }
+        public ActionResult ProductList2()
+        {
+            return View();
+        }
+        public ActionResult ProductList3()
+        {
+            return View();
+        }
+        public ActionResult ProductList4()
+        {
+            return View();
+        }
+        public ActionResult ProductList5()
         {
             return View();
         }

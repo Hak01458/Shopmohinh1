@@ -1,0 +1,262 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+
+}
+<style type="text/css">
+    .taskhome {
+        text-align: center;
+        margin-right: 60rem;
+        margin-top: 1rem;
+    }
+
+        .taskhome a {
+            text-decoration: none;
+            color: black;
+        }
+
+    .topbanner {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #banneronepiece {
+        background-image: url("../Content/img/quy26.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 430px;
+        width: 1000px;
+        justify-content: center;
+        color: white;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+
+    .allitem {
+        justify-content: space-between;
+        display: flex;
+        width: 900px;
+        margin: 0 auto;
+        /*margin-bottom:100px;*/
+        margin-top: 3rem;
+    }
+
+    .item-list, .item-list1, .item-list2, .item-list3 {
+        width: 220px; /* Đặt chiều rộng cố định cho các ô */
+        height: 300px; /* Đặt chiều cao cố định cho các ô */
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 350px;
+    }
+
+        .item-list img, .item-list1 img, .item-list2 img, .item-list3 img {
+            width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+            height: auto; /* Tự động co dãn theo chiều rộng */
+            max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+            object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+        }
+</style>
+<div class="taskhome">
+    <a href="~/Home/TrangChu">Trang chủ</a><span>&#62;Kimetsu No Yaiba </span>
+</div>
+<div class="topbanner">
+    Kimetsu No Yaiba
+</div>
+<div id="banneronepiece">
+
+
+</div>
+<section class="AllList">
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/quy1.jpg" />
+            <p>Mô Hình Zenitsu chibi chiến đấu – Cao 8cm nặng 190gr – Hộp màu</p>
+            <p>Giá:</p>
+            <p>480.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/quy2.jpg" />
+            <p>Mô Hình Shinobu G5 chiến đấu – Cao 13cm nặng 144g – Hộp màu</p>
+            <p>Giá:</p>
+            <p>430.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/quy3.jpg" />
+            <p>Mô Hình Phong Trụ dáng đứng siêu ngầu – Cao 31cm, nặng 700g – Có Hộp</p>
+            <p>Giá:</p>
+            <p>390.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/quy4.jpg" />
+            <p>Mô Hình Luyến Trụ chiến đấu – Cao 22cm, nặng 800gr – Có Vỏ Hộp màu</p>
+            <p>Giá:</p>
+            <p>495.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/quy5.jpg" />
+            <p> Mô Hình Kimetsu No Yaiba Shinobu dáng đứng chiến đấu – Cao 29cm, nặng 800g – Có hộp </p>
+            <p>Giá:</p>
+            <p>410.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/quy6.jpg" />
+            <p>
+                Mô Hình Sabito dáng đứng siêu ngầu – Cao 29cm, nặng 700g – Có Hộp màu
+            </p>
+            <p>Giá:</p>
+            <p>520.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/quy7.jpg" />
+            <p>
+                Mô Hình Tsugikuni Yoriichi Cao 30cm Nặng 500gram Có Box Đẹp
+            </p>
+            <p>Giá:</p>
+            <p>510.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/quy8.jpg" />
+            <p>Mô hình Demon Slayer Bộ 4 nhân vật Thanh Gươm Diệt Quỷ – Cao 4cm nặng 100g – No box</p>
+            <p>Giá:</p>
+            <p>480.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/quy9.jpg" />
+            <p>
+                Mô Hình Thượng Nhất Kokushibou chiến đấu có led – Cao 22cm nặng 500gr – Có Hộp Màu
+            </p>
+            <p>Giá:</p>
+            <p>465.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/quy10.png" />
+            <p>
+                Mô hình Demon Slayer Kamado Tanjirou – Cao 17cm, nặng 700gr – No box
+            </p>
+            <p>Giá:</p>
+            <p>750.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/quy11.jpg" />
+            <p>Mô Hình Thượng tam Akaza dáng đứng siêu ngầu – Cao 26,5cm nặng 600gr – Có Vỏ Hộp</p>
+            <p>Giá:</p>
+            <p>600.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/quy12.png" />
+            <p>
+                Mô hình Demon Slayer Nham Trụ Himejima Gyoumei – Cao 20cm, nặng 300g – No Box
+            </p>
+            <p>Giá:</p>
+            <p>400.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/quy13.jpg" />
+            <p>
+                Mô Hình Chúa Quỷ Muzan dáng đứng siêu ngầu – Cao 30cm, nặng 800g – No Box
+            </p>
+            <p>Giá:</p>
+            <p>460.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/quy14.png" />
+            <p>Mô hình Demon Slayer Xà Trụ Iguro Obanai – Cao 16cm, nặng 300gr – No Box</p>
+            <p>Giá:</p>
+            <p>480.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/quy15.jpg" />
+            <p>
+                Mô Hình Chibi – Inosuke chiến đấu – Cao 10cm, nặng 130gr – Hộp màu
+            </p>
+            <p>Giá:</p>
+            <p>400.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/quy16.jpg" />
+            <p>
+                Mô Hình Ác quỷ Tanjiro – Cao 21cm, nặng 1kg2 – Có Vỏ Hộp màu
+            </p>
+            <p>Giá:</p>
+            <p>450.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/quy17.jpg" />
+            <p>
+                Mô Hình Thủy trụ Tomioka Giyuu chiến đấu – Cao 10cm, nặng 145gr – Hộp màu
+            </p>
+            <p>Giá:</p>
+            <p>340.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/quy18.jpg" />
+            <p>Mô Hình Hà Trụ dáng ngồi – Cao 14cm, nặng 150gr – Có Vỏ Hộp màu</p>
+            <p>Giá:</p>
+            <p>530.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/quy19.jpg" />
+            <p>
+                Mô Hình Shinobu bắt bướm – Cao 31cm, nặng 2kg – Có Hộp
+            </p>
+            <p>Giá:</p>
+            <p>466.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/quy21.jpg" />
+            <p>Mô Hình Thượng Nhất Kokushibou chiến đấu có led – Cao 30cm, nặng 2,5kg – Có Hộp Màu</p>
+            <p>Giá:</p>
+            <p>450.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/quy22.jpg" />
+            <p>
+                Mô Hình Kimetsu No Yaiba Âm Trụ dáng đứng siêu ngầu – Cao 33cm, nặng 500gr – Vỏ Hộp màu
+
+            </p>
+            <p>Giá:</p>
+            <p>350.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/quy23.jpg" />
+            <p>
+                Mô Hình Thượng Lục Gyuutarou Cao 30cm Nặng 500 Gram Có Box
+            </p>
+            <p>Giá:</p>
+            <p>510.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/nar23.jpg" />
+            <p>
+                Mô Hình Muzan Kubutsuji – Cao 15cm
+            </p>
+            <p>Giá:</p>
+            <p>310.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/quy25.jpg" />
+            <p>Mô Hình Kimetsu No Yaiba Kyojuro Rengoku Viêm Trụ – Cao 15cm nặng 300gr</p>
+            <p>Giá:</p>
+            <p>517.000<span>&#8363;</span></p>
+        </div>
+    </div>
+</section>
+
+
+

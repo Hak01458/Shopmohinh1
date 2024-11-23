@@ -6,34 +6,301 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .dropdown-menu {
+            display: none; /* Ẩn menu thả xuống */
+            position: absolute; /* Để menu thả xuống không ảnh hưởng đến bố cục */
+            background-color: white; /* Màu nền cho menu */
+            border: 1px solid #ccc; /* Đường viền cho menu */
+            z-index: 1000; /* Đảm bảo menu hiển thị trên các phần tử khác */
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block; /* Hiển thị menu khi hover */
+        }
+
+        .cart-icon {
+            position: relative; /* Để có thể đặt badge ở vị trí mong muốn */
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 5px;
+            font-size: 12px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left1 {
+            text-align: left;
+            font-size: 15px;
+        }
+
+        .left2 {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .left3 {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .footer .logo1 img {
+            height: 30px; /* Chỉnh kích thước ảnh nhỏ lại */
+            margin: 0 5px; /* Khoảng cách giữa các ảnh */
+        }
+
+        .footer p {
+            margin: 5px 0; /* Tạo khoảng cách nhỏ giữa các chữ */
+        }
+        .icon-account{
+            color:black;
+           
+        }
+        .list-icon a{
+            text-decoration:none;
+            color:black;
+            margin-top:1rem;
+        }
+        .item-icon {
+            position: relative; /* Để menu thả xuống được định vị tương đối */
+        }
+
+        .shopping-cart {
+            color: black; /* Đổi màu chữ thành đen */
+            text-decoration: none; /* Loại bỏ gạch dưới */
+        }
+
+            .shopping-cart:hover {
+                text-decoration: underline; /* Có thể thêm gạch dưới khi hover nếu bạn muốn */
+            }
+
+        .list-icon {
+          display:flex;
+          
+          margin-left:1rem;
+          
+        }
+
+        
+        .cart img{
+            width:40px;
+        }
+        .item-icon1 a{
+            color:black;
+            text-decoration:none;
+        }
+        .container1{
+            font-size:18px;
+           
+            display:flex;
+            justify-content:space-between;
+            width:1300px;
+            text-align:center;
+            margin:0 auto;
+        }
+        .tedi-shop {
+            font-size: 24px;
+            font-weight: bold; 
+        }
+        .list-icon1 div {
+            margin: 0 10px; /* Khoảng cách giữa các liên kết */
+        }
+
+            .list-icon1 div a {
+                text-decoration: none;
+                color: black;
+               /* font-weight: bold;*/ /* Làm cho văn bản đậm hơn */
+            }
+
+        .task {
+            background-color: black;
+            height: 25px;
+            max-width:1500px;
+            width:auto;
+            margin:0 auto;
+        }
+
+        .main-menu {
+            display: flex;
+            gap: 50px;
+            font-size: 17px;
+            margin-left: 1rem;
+        }
+
+            .main-menu a {
+                color: white;
+                text-decoration: none;
+            }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        body{
+            background-color:whitesmoke;
+            width:1500px;
+            margin:0 auto;
+        }
+        .cart-count {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 5px;
+            font-size: 12px;
+            margin-left: 5px; /* Khoảng cách giữa chữ và số lượng */
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-        <div class="container">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <nav class=" navbar navbar-expand-sm navbar-toggleable-sm navbar-white bg-info">
+        <div class="container1">
+            @Html.ActionLink("TEDISHOP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand tedi-shop" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                </ul>
-            </div>
+
+            @if (Session["Username"] != null)
+            {
+                <div class="item-icon">
+                    <div class="icon-account" style="position: relative;">
+                        <!-- Dòng thông báo khuyến mãi -->
+                        <div style="text-align: center; margin-bottom: 10px;">
+                            FREE SHIPPING ON ALL ORDERS NO MINIMUM PURCHASE
+                        </div>
+                        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+                            <div style="margin-right: 10px;">
+                                <a href="@Url.Action("Index", "Cart")" class="shopping-cart"> ShoppingCart <span class="cart-count">(@ViewBag.ProductCount)</span></a>
+                            </div>
+                            <span class="username" style="cursor: pointer;">@Session["Username"]</span>
+                            <div class="list-icon">
+                                <div><a href="~/Account/ProfileAccount">Thông tin</a></div>
+                                <div style="margin-left: 1rem;"><a href="@Url.Action("PurchaseHistory", "Order")">Lịch sử mua hàng</a></div>
+                                <div  style="margin-left: 1rem;"><a href="@Url.Action("Logout", "Account")">Đăng xuất</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="icon glyphicon glyphicon-user icon-account" href="@Url.Action("Index", "Cart")" style="text-decoration:none; color:black;"></a>
+                </div>
+            }
+            else
+            {
+                <div class="item-icon1">
+                    <div class="icon glyphicon glyphicon-user icon-account">
+                        <div class="list-icon1">
+                            <div style="text-align: center; margin-bottom: 10px;">
+                                FREE SHIPPING ON ALL ORDERS NO MINIMUM PURCHASE
+                            </div>
+                            <div style="display: flex; justify-content: space-around;">
+                                <div><a href="@Url.Action("Checkout", "Order")" class="shopping-cart">ShoppingCart</a></div>
+                                <div><a href="@Url.Action("Login", "Account")">Sign in or Create an account</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="icon glyphicon glyphicon-user icon-account" href="@Url.Action("Index", "Cart")" style="text-decoration:none; color:black;"></a>
+                </div>
+            }
         </div>
+
     </nav>
+    <div class="task">
+        <div class="main-menu">
+            <div><a href="~/Home/Index">Home</a></div>
+            <div class="dropdown">
+                <a href="#">Danh sách sản phẩm</a>
+                <div class="dropdown-content">
+                    <a href="~/Product/ProductList">One Piece</a>
+                    <a href="~/Product/ProductList2">Bleach</a>
+                    <a href="~/Product/ProductList1">Naruto</a>
+                    <a href="~/Product/ProductList3">Dragon Ball</a>
+                    <a href="~/Product/ProductList4">Kimetsu no Yaiba</a>
+                    <a href="~/Product/ProductList5">Gundam</a>
+                </div>
+            </div>
+            <div><a href="~/Home/LienHe">Liên hệ</a></div>
+
+        </div>
+    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <footer style="background-color: deepskyblue; color: white; width:1500px; height:300px; margin-left:-6.5rem; text-align: center; border-top: 5px solid #5486d7;">
+            <div class="footer">
+                <div class="left1">
+                    <div class="logo">
+                        <a href="~/Home/trangchu"><img src="~/Content/img/logo.jpg" alt="logo" /></a>
+                    </div>
+                    <p style="font-weight: bold;">WEBSITE THUỘC QUYỀN SỞ HỮU:</p>
+                    <p>Mô hình Tedi - Shop mô hình anime giá rẻ</p>
+                    <p>Địa Chỉ: 206/34 Lý Thường Kiệt, Phường 14, Quận 10, HCM</p>
+                    <p>Hotline: 0923.867.916</p>
+                    <p>Email: <a href="mailto:mohinhfigure@gmail.com" style="color: white; text-decoration: none;">mohinhfigure@gmail.com</a></p>
+
+                </div>
+                <div class="left2">
+                    <p style="font-weight: bold;">Danh Mục Sản Phẩm</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Mô Hình Anime</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Nendoroid</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Bộ figure</p>
+                </div>
+                <div class="left3">
+                    <p style="font-weight: bold;">Liên Hệ</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Phạm Nguyễn Quốc Anh</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;"> Nguyễn Thế Nguyên</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Nguyễn Bình Nguyên</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Trần Minh Quý</p>
+                    <p href="#" style="color: white; margin: 0 15px; text-decoration: none;">Nguyễn Võ Vĩnh An</p>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <p style="font-weight: bold;">KẾT NỐI VỚI MÔ HÌNH Tedi</p>
+                    <!-- Bạn có thể thêm các biểu tượng mạng xã hội vào đây nếu cần -->
+                    <div class="logo1">
+                        <a href="https://www.facebook.com/profile.php?id=100061974022081" target="_blank"><img src="~/Content/img/fb.jpg" alt="logo" /></a>
+                        <a href="https://mail.google.com/mail/u/0/?hl=vi#inbox" target="_blank"><img src="~/Content/img/gmail.jpg" alt="logo" /></a>
+                        <a href="~/Home/trangchu"><img src="~/Content/img/x.jpg" alt="logo" /></a>
+                        <a href="https://www.instagram.com/katori01458/" target="_blank"><img src="~/Content/img/ins.jpg" alt="logo" /></a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    
 </body>
 </html>

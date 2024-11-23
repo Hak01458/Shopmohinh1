@@ -1,0 +1,30 @@
+﻿@model Shopmohinh.Models.ViewModel.ProfileVM
+
+@{
+    ViewBag.Title = "Thông tin tài khoản";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông tin tài khoản</h2>
+
+<div>
+    <h4>Tài khoản: @Model.Username</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Tên khách hàng</dt>
+        <dd>@Model.CustomerName</dd>
+
+        <dt>Email</dt>
+        <dd>@Model.CustomerEmail</dd>
+
+        <dt>Điện thoại</dt>
+        <dd>@Model.CustomerPhone</dd>
+
+        <dt>Địa chỉ</dt>
+        <dd>@Model.CustomerAddress</dd>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Chỉnh sửa thông tin", "EditProfile", "Account")
+</p>

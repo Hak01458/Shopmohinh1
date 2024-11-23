@@ -1,0 +1,24 @@
+﻿@model Shopmohinh.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<head>
+    <style>
+        img {
+            width: 400px;
+            height: 350px;
+        }
+    </style>
+</head>
+<h2 class="bg-success">Chi tiết sản phẩm</h2>
+
+<div class="container-fluid">
+    @Html.Partial("PV_DetailDeteleProducts", Model)
+</div>
+<p>
+    @Html.ActionLink("Cập nhập", "Edit", new { id = Model.ProductID }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Quay lại trang chính", "Index", null, new { @class = "btn btn-primary" })
+</p>
