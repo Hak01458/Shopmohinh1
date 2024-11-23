@@ -1,0 +1,203 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<style type="text/css">
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .span1 img, .span3 img {
+        height: 200px;
+        margin-right: 10px;
+    }
+
+    .span2, .span4 {
+        text-align: center;
+        flex: 2;
+    }
+
+    .span2 {
+        text-decoration: none;
+        color: black;
+    }
+
+    .span2 {
+        margin-right: 4rem;
+    }
+
+        .span2 img {
+            height: 200px;
+        }
+
+    .span4 {
+        margin-right: 4rem;
+    }
+
+        .span4 img {
+            height: 200px;
+        }
+
+    .return-policy {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 16px;
+        margin: 10px 0;
+        width: fit-content;
+    }
+
+    .return-policy1 {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 16px;
+        margin: 10px 0;
+        width: fit-content;
+    }
+
+    .completed-message {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-size: 12px;
+        z-index: 1000;
+    }
+
+    .completed-message1 {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-size: 12px;
+        z-index: 1000;
+    }
+
+    .All {
+        width: 600px;
+        text-align: right;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    /* .span1 {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        position: relative;
+        margin: 20px;
+    }*/
+    .span1, .span3 {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        position: relative;
+        margin: 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* .span3 {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        position: relative;
+        margin: 20px;
+    }*/
+
+</style>
+@{
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+<section class="proDdetail">
+    <div class="container">
+        <h1>Lịch sử Mua hàng</h1>
+        <div class="span1">
+            <img src="~/Content/img/ace.jpg" />
+            <div class="span2">
+                <a>Mô Hình ACE đứng nâng cầu có Led – Cao 39cm nặng 3kg1 – Box Carton</a>
+            </div>
+            <div class="return-policy">
+                Trả hàng miễn phí
+            </div>
+            <div class="completed-message">
+                Hoàn thành
+            </div>
+        </div>
+        <div class="All">
+            <p>930.000<span> &#8363;</span></p>
+            <ul id="purchaseList"></ul>
+            <p>tổng số tiền(1 sản phẩm):930000</p>
+            <button id="buyAgainBtn">Mua lại</button>
+            <button id="viewReviewsBtn">Xem đánh giá</button>
+        </div>
+        <div class="span3">
+            <img src="~/Content/img/gundam4.jpg" />
+            <div class="span4">
+                <a>Mô Hình gundam cầm thần mi nh kiếm – Cao 39cm nặng 3kg1 – Box Carton</a>
+            </div>
+            <div class="return-policy1">
+                Trả hàng miễn phí
+            </div>
+            <div class="completed-message1">
+                Hoàn thành
+            </div>
+        </div>
+
+
+        <div class="All">
+            <p>730.000<span> &#8363;</span></p>
+            <ul id="purchaseList"></ul>
+            <p>tổng số tiền(1 sản phẩm):730000</p>
+            <button id="buyAgainBtn">Mua lại</button>
+            <button id="viewReviewsBtn">Xem đánh giá</button>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</section>

@@ -1,0 +1,269 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<style type="text/css">
+        .taskhome {
+            text-align: center;
+            margin-right: 60rem;
+            margin-top: 1rem;
+        }
+
+            .taskhome a {
+                text-decoration: none;
+                color: black;
+            }
+
+        .topbanner {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #bannerGudam {
+            background-image: url('../../content/img/nengundam.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            width: 1000px;
+            /*display: flex;
+    align-content: center;*/
+            justify-content: center;
+            color: white;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
+
+        .allitem {
+            justify-content: space-between;
+            display: flex;
+            width: 900px;
+            margin: 0 auto;
+            /*margin-bottom:100px;*/
+            margin-top: 3rem;
+        }
+        /* .item-list img {
+                height: 200px;
+
+
+            }
+            .item-list1 img {
+                height: 200px;
+
+            }
+            .item-list2 img {
+                height: 200px;
+
+            }
+            .item-list3 img {
+                height: 200px;
+
+            }
+            .item-list {
+                box-shadow: 0 5px 40px rgb(0, 0, 0, 0.1);
+                margin-right: 2rem;
+
+            }
+            .item-list1 {
+                box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+                margin-right: 2rem;
+            }
+            .item-list2 {
+                box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+                margin-right: 2rem;
+            }
+            .item-list3 {
+                box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+                margin-right: 2rem;
+            }
+        */
+        .item-list, .item-list1, .item-list2, .item-list3 {
+            width: 220px; /* Đặt chiều rộng cố định cho các ô */
+            height: 300px; /* Đặt chiều cao cố định cho các ô */
+            box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+            margin-right: 2rem;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 350px;
+        }
+
+            .item-list img, .item-list1 img, .item-list2 img, .item-list3 img {
+                width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+                height: auto; /* Tự động co dãn theo chiều rộng */
+                max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+                object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+            }
+</style>
+<div class="taskhome">
+    <a href="~/Home/TrangChu">Trang chủ</a><span>&#62; Gundam</span>
+</div>
+<div class="topbanner">
+    Gundam
+</div>
+<div id="bannerGudam">
+
+
+</div>
+<section class="AllList">
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/HIRM Astray.jpg" />
+            <p>Mô hình figure: MB Astray red frame Powered</p>
+            <p>Giá:</p>
+            <p>3.990.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/MG Astray.jpg" />
+            <p>Mô hình figure: MG Astray red frame kai</p>
+            <p>Giá:</p>
+            <p>1.090.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/RG Astray.jpg" />
+            <p>Mô hình figure: RG Astray red frame</p>
+            <p>Giá:</p>
+            <p>̣̣̉699.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/PG Astray.jpg" />
+            <p>Mô hình figure: PG Astray red frame</p>
+            <p>Giá:</p>
+            <p>1.499.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/RG Unicorn.jpg" />
+            <p>Mô Hình figure: RG Unicorn Gundam full armor</p>
+            <p>Giá:</p>
+            <p>530.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/MG Unicorn.jpg" />
+            <p>Mô Hình figure: MG RX-0 Unicorn Gundam 02 Banshee Ver.K Bandai</p>
+            <p>Giá:</p>
+            <p>310.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/MG Unicorn.jpg" />
+            <p>Mô hình figure: MGEX MG Extreme Unicorn Gundam ver.Ka full LED</p>
+            <p>Giá:</p>
+            <p>4.700.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/PG Unicorn.jpg" />
+            <p>Mô Hình PG 1/60 Unicorn 02 Fighter Banshee</p>
+            <p>Giá:</p>
+            <p>2.220.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/MG Wing gundam.jpg" />
+            <p>Mô hình lắp ráp MG Wing Gundam Zero EW</p>
+            <p>Giá:</p>
+            <p>1.390.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/MG Wing gundam SN.jpg" />
+            <p>Mô Hình Lắp Ráp Gundam MG Wing Snow White Prelude (Supernova)</p>
+            <p>Giá:</p>
+            <p>2.025.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/MG Astray blue frame.jpg" />
+            <p>Mô Hình Gundam Astray Blue Frame D (MG - 1/100)</p>
+            <p>Giá:</p>
+            <p>1.090.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/MG Strike freedom.jpg" />
+            <p>Mô hình lắp ráp Gundam MG 1/100 Strike Freedom</p>
+            <p>Giá:</p>
+            <p>1.015.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/aobing.jpg" />
+            <p>Mô hình MOTOR NUCLEAR MNP-XH03 AZURE DRAGON AOBING</p>
+            <p>Giá:</p>
+            <p>1.000.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/mg_barbatos_gundam.jpg" />
+            <p>Mô Hình lắp ráp Gundam MG Barbatos</p>
+            <p>Giá:</p>
+            <p>1.290.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/MG Exia.jpg" />
+            <p>Mô Hình Gundam Exia (MG - 1/100)</p>
+            <p>Giá:</p>
+            <p>1.080.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/MG force impulse.jpg" />
+            <p>Mô hình Gundam Force Impulse (MG - 1/100)</p>
+            <p>Giá:</p>
+            <p>1.024.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/MG Infinite justice.jpg" />
+            <p>Mô Hình Gundam Infinite Justice (MG - 1/100)</p>
+            <p>Giá:</p>
+            <p>1.084.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/MG Deathscythe.jpg" />
+            <p>Mô Hình lắp ráp Gundam MG 1/100 Gundam Deathscythe EW Ver</p>
+            <p>Giá:</p>
+            <p>834.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/MG Epyon.jpg" />
+            <p>Mô hình lắp ráp Gundam MG 1/100 Gundam Epyon EW</p>
+            <p>Giá:</p>
+            <p>2.355.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/MG Sandrock.jpg" />
+            <p>Mô Hình lắp ráp Gundam MG 1/100 Gundam Sandrock EW ver</p>
+            <p>Giá:</p>
+            <p>915.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/MG Ginn Gladiator.jpg" />
+            <p>Mô Hình lắp ráp Gundam MG 1/100 Ginn Gladiator</p>
+            <p>Giá:</p>
+            <p>2.185.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/MG Lightning Strike Gundam Ver. RM.jpg" />
+            <p>Mô Hình lắp ráp Gundam MG 1/100 Lightning Strike Gundam Ver. RM</p>
+            <p>Giá:</p>
+            <p>1.805.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/HG ariel.jpg" />
+            <p>Mô Hình lắp ráp Gundam HG WFM 1/144 Aerial Gundam Permet Score Six 6</p>
+            <p>Giá:</p>
+            <p>945.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/MG Sazabi.jpg" />
+            <p>Mô Hình lắp ráp Gundam MG Sazabi Ver Ka</p>
+            <p>Giá:</p>
+            <p>2.290.000<span>&#8363;</span></p>
+        </div>
+    </div>
+</section>
+
+

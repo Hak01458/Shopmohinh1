@@ -1,0 +1,261 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+
+<style>
+    .taskhome {
+        text-align: center;
+        margin-right: 60rem;
+        margin-top: 1rem;
+    }
+
+        .taskhome a {
+            text-decoration: none;
+            color: dimgrey;
+        }
+
+    .topbanner {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #bannerdragon {
+        background-image: url('../../content/img/drgon.png');
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        width: 1000px;
+        justify-content: center;
+        color: white;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+
+    .allitem {
+        justify-content: space-between;
+        display: flex;
+        width: 900px;
+        margin: 0 auto;
+        /*margin-bottom:100px;*/
+        margin-top: 3rem;
+    }
+
+    .item-list, .item-list1, .item-list2, .item-list3 {
+        width: 220px; /* Đặt chiều rộng cố định cho các ô */
+        height: 300px; /* Đặt chiều cao cố định cho các ô */
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 350px;
+    }
+
+        .item-list img, .item-list1 img, .item-list2 img, .item-list3 img {
+            width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+            height: auto; /* Tự động co dãn theo chiều rộng */
+            max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+            object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+        }
+</style>
+
+
+<div class="taskhome">
+    <a href="~/Home/TrangChu">Trang chủ</a><span>&#62; DragonBall </span>
+</div>
+<div class="topbanner">
+    DragonBall
+</div>
+<div id="bannerdragon">
+
+
+</div>
+<section class="AllList">
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/mh1.png" />
+            <p>Mô Hình DragonBall Goku AI chibi tóc trắng dáng đứng - cao 16cm - nặng 200gram - Hộp Màu - Figure Dragonball N1-K54-T3-S1</p>
+            <p>Giá:</p>
+            <p>
+                69.000<span>&#8363;</span>
+            </p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/mh2.png" />
+            <p>Mô Hình Vegeta ssj4 dáng bay - Cao 20cm - nặng 250gram - Phụ kiện : Đế - bọc túi OPP - có hộp màu - N1-T2-ST9</p>
+            <p>Giá:</p>
+            <p>79.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/mh3.png" />
+            <p>Mô Hình Gogeta ssj4 dáng bay - Cao 20cm - nặng 250gram - Phụ kiện : Đế - bọc túi OPP - có hộp màu - N1-T2-ST8</p>
+            <p>Giá:</p>
+            <p>86.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/mh4.png" />
+            <p>Mô Hình Songoku ssj4 dáng bay - Cao 17cm - nặng 250gram - Phụ kiện : Đế - bọc túi OPP - có hộp màu - N1-T2-ST7</p>
+            <p>Giá:</p>
+            <p>83.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/mh5.png" />
+            <p>Mô hình DragonBall Bộ 6 nhân vật dragonball cao 18cm - Nặng : 200gram - Bản Bộ - Dragon Ball - No Box - N3-ST4            </p>
+            <p>Giá:</p>
+            <p>189.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/mh6.png" />
+            <p>Mô Hình Dragon Ball Bộ 4 Goku Dáng Đứng Có Đế - cao 17cm - nặng 780gram - DragonBall - Hộp Màu - N3-K46-T1-S1-S2</p>
+            <p>Giá:</p>
+            <p>185.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/mh7.png" />
+            <p>MMô hình DragonBall Songoku dáng đứng , hàng cao cấp - Cao 33cm - nặng 1kg - phụ kiện : 1 gậy đeo lưng - Dragon Ball - Full Box - N1-K25-T5-S1-S2-S3</p>
+            <p>Giá:</p>
+            <p>175.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/mh8.png" />
+            <p>Mô hình DragonBall Bộ 9 nhân Vật Chibi base đẹp Dragon ball - Cao 10cm - nặng 500gram - Dragon Ball - no box , bọc túi opp</p>
+            <p>Giá:</p>
+            <p>185.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/mh9.png" />
+            <p>Mô Hình DragonBall Songoku tóc trắng Bay - Cao 21cm - nặng 500gram - Phụ kiện : Đế - Figure DragonBall - Bọc Túi OPP - No Box - N1-K52-T1-S1</p>
+            <p>Giá:</p>
+            <p>70.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/mh10.png" />
+            <p>Mô Hình DragonBall Broly Bay - Cao 20cm - nặng 500gram - Phụ kiện : Đế - Figure DragonBall - Bọc Túi OPP - No Box - N1-K22-T2-S1</p>
+            <p>Giá:</p>
+            <p>70.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/mh11.png" />
+            <p>Mô Hình DragonBall Songoku Rách Áo Dáng Bay - Cao 20cm - nặng 500gram - Phụ kiện : Đế - Figure DragonBall - Bọc Túi OPP - No Box - N1-K47-T2-S2</p>
+            <p>Giá:</p>
+            <p>79.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/mh12.png" />
+            <p>Mô Hình DragonBall Gogeta tóc xanh Bay - Cao 22cm - nặng 500gram - Phụ kiện : Đế - Figure DragonBall - Bọc Túi OPP - No Box - N1-K37-T1-S10</p>
+            <p>Giá:</p>
+            <p>75.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/mh13.png" />
+            <p>
+                Mô hình DragonBall Gohan Kid Dáng Đứng Có Base - Cao 21cm - nặng 500gram - Dragon Ball - Có Hộp màu - N1-K49-T2-S1
+            </p>
+            <p>Giá:</p>
+            <p>66.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/mh14.png" />
+            <p>Mô Hình Dragon Ball Songoku ultral vô cực Có Led - Cao 29cm - Nặng 1400gram - Figure DragonBall - Có Hộp Màu - Full Box - N1-K26-T5-S1</p>
+            <p>Giá:</p>
+            <p>550.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/mh15.png" />
+            <p>
+                Mô hình DragonBall Songoku và vegeta - Cao 30 - 32cm - nặng 800gram - Phụ kiện : Đế - Dragon Ball - Box Xốp - Hộp Carton
+            </p>
+            <p>Giá:</p>
+            <p>359.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/mh16.png" />
+            <p>
+                Mô hình DragonBall Bộ 6 dragonball cao 18cm - Nặng : 200gram - Bản Bộ - Dragon Ball - No Box - N3-K50-T1-S1
+            </p>
+            <p>Giá:</p>
+            <p>219.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/mh17.png" />
+            <p>
+                Mô Hình DragonBall Trunks trạng thái chiến đấu - Cao 25cm - nặng 1200Gram - Phụ kiện : 2 đầu thay thế + kiếm - Full Box - Hộp màu - N1-K38-T4-S11
+            </p>
+            <p>Giá:</p>
+            <p>369.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/mh18.png" />
+            <p>
+                Mô Hình DragonBall Songoku dáng đứng tay cầm ngọc - Cao 41cm - Nặng 2500gram , figure DragonBall , Full box - N1-K23-T4-S1
+            </p>
+            <p>Giá:</p>
+            <p>299.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/mh19.png" />
+            <p>
+                Mô hình DragonBall vegito tóc xanh bắn chưởng hiệu ứng base đẹp - Cao 10.5cm - nặng 150gram - Dragon Ball - Có Hộp màu
+            </p>
+            <p>Giá:</p>
+            <p>89.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/mh20.png" />
+            <p>
+                Mô Hình DragonBall Picolo dáng đứng siêu đẹp Có Base - cao 38cm - Nặng 1400gram - Figure DragonBall - Hộp Carton
+            </p>
+            <p>Giá:</p>
+            <p>359.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/mh21.png" />
+            <p>
+                Mô Hình Dragon Ball Songoku vô cực Hoá Khỉ Đột Trắng Có Led - Cao 31cm - Nặng 2100gram - Figure DragonBall - Có Hộp Màu - Full Box - N1-K24-T5-S3
+            </p>
+            <p>Giá:</p>
+            <p>547.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/mh22.png" />
+            <p>
+                Mô Hình Dragon Ball Songoku dáng đứng + Bán Thân - Cao 48cm - Nặng 2000gram - Hộp Bìa carton - Figure anime Dragon ball
+            </p>
+            <p>Giá:</p>
+            <p>329.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/mh23.png" />
+            <p>
+                Mô Hình DragonBall Songoku nằm mây - Có Led - Cao 16.5cm - Nặng 200gram , figure DragonBall - Full Box - N4-K14
+            </p>
+            <p>Giá:</p>
+            <p>109.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list3">
+            <img src="~/Content/img/mh24.png" />
+            <p>
+                Mô Hình Gogeta ssj4 cầm ngọc rồng có tay thay thế - Cao 30cm - nặng 700gram - Phụ kiện : đuôi + ngọc rồng - Có box
+            </p>
+            <p>Giá:</p>
+            <p>135.000<span>&#8363;</span></p>
+        </div>
+    </div>
+</section>
+

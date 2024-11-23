@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Shopmohinh.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Lịch sử đặt hàng</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+          Thời gian
+        </th>
+        <th>
+           Đơn giá
+        </th>
+        <th>
+           Phương thức thanh toán
+        </th>
+        <th>
+           Địa chỉ
+        </th>
+        <th>
+            Phương thức giao hàng
+        </th>
+        <th>
+           Hình thức thanh toán
+        </th>
+        <th>
+            Tên người dùng
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShippingAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShippingMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.CustomerName)
+        </td>
+        <td>
+         
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.OrderID }, new {@class = "btn btn-primary"}) 
+      
+        </td>
+    </tr>
+}
+
+</table>

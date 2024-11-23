@@ -10,10 +10,11 @@
     }
 
     #container {
-        border: 2px solid deepskyblue;
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
-        width: 1501px; /* Đặt chiều rộng cố định cho khung */
+        width: 100%; /* Đặt chiều rộng cố định cho khung */
         margin: 0 auto; /* Canh giữa trang */
+        max-width:1800px;
     }
 
     header {
@@ -100,12 +101,47 @@
     .task {
         background-color:black;
        height:25px;
-       margin-top:-1rem;
+      
     }
-    .main-menu ul li a{
+    .main-menu{
+         display:flex;
+        gap:50px;
+        font-size:17px;
+        margin-left:1rem;
+        
+    }
+    .main-menu a{
         color:white;
+        text-decoration:none;
+    }
+ 
+    .dropdown {
+        position: relative;
     }
 
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
     
 </style>
 <!DOCTYPE html>
@@ -139,8 +175,8 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#"><img src="~/Content/img/hearticon.jpg" /></a>
-                        <a href="#">My Wishlist</a>
+                        <a href="~/ShoppingCart/HistoryShopping"><img src="~/Content/img/hearticon.jpg" /></a>
+                        <a href="~/ShoppingCart/HistoryShopping">My Wishlist</a>
                     </li>
                     <li>
                         <a href="~/User/Login">
@@ -153,18 +189,22 @@
             </nav>
         </header>
         <div class="task">
-            <nav class="main-menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="~/Product/ProductList">One Piece</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">LookBook</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">FAQS</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact us</a></li>
-                </ul>
-            </nav>
+            <div class="main-menu">
+                <div><a href="~/Home/TrangChu">Home</a></div>
+                <div class="dropdown">
+                    <a href="#">Danh sách sản phẩm</a>
+                    <div class="dropdown-content">
+                        <a href="~/Product/ProductList">One Piece</a>
+                        <a href="~/Product/ProductList2">Bleach</a>
+                        <a href="~/Product/ProductList1">Naruto</a>
+                        <a href="~/Product/ProductList3">Dragon Ball</a>
+                        <a href="~/Product/ProductList4">Kimetsu no Yaiba</a>
+                        <a href="~/Product/ProductList5">Gundam</a>
+                    </div>
+                </div>
+                <div><a href="~/Home/LienHe">Liên hệ</a></div>
+              
+            </div>
         </div>
         <section>
 
@@ -202,10 +242,10 @@
                     <p style="font-weight: bold;">KẾT NỐI VỚI MÔ HÌNH Tedi</p>
                     <!-- Bạn có thể thêm các biểu tượng mạng xã hội vào đây nếu cần -->
                     <div class="logo1">
-                        <a href="https://www.facebook.com/profile.php?id=100061974022081"><img src="~/Content/img/fb.jpg" alt="logo" /></a>
-                        <a href="https://mail.google.com/mail/u/0/?hl=vi#inbox"><img src="~/Content/img/gmail.jpg" alt="logo" /></a>
+                        <a href="https://www.facebook.com/profile.php?id=100061974022081" target="_blank"><img src="~/Content/img/fb.jpg" alt="logo" /></a>
+                        <a href="https://mail.google.com/mail/u/0/?hl=vi#inbox" target="_blank"><img src="~/Content/img/gmail.jpg" alt="logo" /></a>
                         <a href="~/Home/trangchu"><img src="~/Content/img/x.jpg" alt="logo" /></a>
-                        <a href="https://www.instagram.com/katori01458/"><img src="~/Content/img/ins.jpg" alt="logo" /></a>
+                        <a href="https://www.instagram.com/katori01458/" target="_blank"><img src="~/Content/img/ins.jpg" alt="logo" /></a>
                     </div>
                 </div>
             </div>

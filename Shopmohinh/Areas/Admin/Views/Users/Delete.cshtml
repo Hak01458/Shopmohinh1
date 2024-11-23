@@ -1,0 +1,41 @@
+﻿@model Shopmohinh.Models.User
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="bg-secondary">Xóa</h2>
+
+<h3 class="bg-danger">Bạn thật sự muốn xóa người dùng này??</h3>
+<div>
+    <h4>Người dùng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Mật khẩu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            Người dùng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserRole)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-primary" /> 
+            @Html.ActionLink("Quay về", "Index", null, new {@class = "btn btn-primary"})
+        </div>
+    }
+</div>

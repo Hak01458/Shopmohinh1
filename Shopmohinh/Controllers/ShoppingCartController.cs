@@ -21,5 +21,9 @@ namespace Shopmohinh.Controllers
         {
             return View();
         }
+        public ActionResult HistoryShopping()
+        {
+            return View();
+        }
     }
 }

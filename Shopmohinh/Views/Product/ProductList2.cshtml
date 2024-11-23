@@ -1,0 +1,195 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<style type="text/css">
+    .taskhome {
+        text-align: center;
+        margin-right: 60rem;
+        margin-top: 1rem;
+    }
+
+        .taskhome a {
+            text-decoration: none;
+            color: black;
+        }
+
+    .topbanner {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #bannerbleach {
+        background-image: url("../Content/img/bleachnen.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 430px;
+        width: 1000px;
+        justify-content: center;
+        color: white;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+
+    .allitem {
+        justify-content: space-between;
+        display: flex;
+        width: 900px;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .item-list, .item-list1, .item-list2, .item-list3 {
+        width: 220px; /* Đặt chiều rộng cố định cho các ô */
+        height: 300px; /* Đặt chiều cao cố định cho các ô */
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 350px;
+    }
+
+        .item-list img, .item-list1 img, .item-list2 img, .item-list3 img {
+            width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+            height: auto; /* Tự động co dãn theo chiều rộng */
+            max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+            object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+        }
+</style>
+<div class="taskhome">
+    <a href="~/Home/TrangChu">Trang chủ</a><span>&#62; Bleach </span>
+</div>
+<div class="topbanner">
+    Bleach
+</div>
+<div id="bannerbleach">
+</div>
+<section class="allList">
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/bleach1.jpg" />
+            <p>Mô hình figure: Toshiro Bleach </p>
+            <p>Giá:</p>
+            <p>9.150.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/bleach2.jpg" />
+            <p>Mô hình figure: Toshiro Bleach trạng thái băng giá </p>
+            <p>Giá:</p>
+            <p>21.800.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/bleach3.jpg" />
+            <p>Mô hình figure: ULquiorra Cifer  </p>
+            <p>Giá:</p>
+            <p>3.090.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/bleach4.jpg" />
+            <p>Mô hình figure: Set 6 Mô Hình Bleach - Nhân Vật Ichigo Kurosaki, Toshiro Hitsugaya, Zaraki Kenpachi, Urahara Kisuke </p>
+            <p>Giá:</p>
+            <p>235.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/bleach5.jpg" />
+            <p>Mô Hình Bleach – Ulquiorra Cifer Resurreccion: Segunda Etapa </p>
+            <p>Giá:</p>
+            <p>750.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/bleach6.jpg" />
+            <p>Mô hình giấy figure: Shunsui Kyoraku cùng cặl song đao </p>
+            <p>Giá:</p>
+            <p>500.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/bleach7.jpg" />
+            <p>Mô hình figure:Action Figure Pvc Bleach Anime Gk Statue Kurosaki Ichigo Lapakviolet </p>
+            <p>Giá:</p>
+            <p>1.886.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/bleach8.jpg" />
+            <p>Mô hình chính hãng - mô hình BLEACH : SOLID AND SOULS - Shigekuni Yamamoto Genryuusai </p>
+            <p>Giá:</p>
+            <p>450.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/bleach9.jpg" />
+            <p>Mô hình Ichiban Kuji Bleach TYBW OP 1 Prize A Kurosaki Ichigo Figure </p>
+            <p>Giá:</p>
+            <p>1.900.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/bleach10.jpg" />
+            <p>Mô hình figure: Ichiban Kuji Bleach Thousand Year Blood War OP.2 </p>
+            <p>Giá:</p>
+            <p>3.586.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/bleach11.jpg" />
+            <p> Mô hình figure: Action Figure Bleach Styling Bravism Ichigo Kurosaki Kuchiki Rukia </p>
+            <p>Giá:</p>
+            <p>500.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/bleach12.jpg" />
+            <p>Mô hình chibi Anime Bleach tử thần nhiều nhân vật Kurosaki Ichigo Kuchiki Rukia Suwabe Junichi Ulquiorra Cifer Abar </p>
+            <p>Giá:</p>
+            <p>90.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/bleach13.jpg" />
+            <p>Mô hình figure:anime Bleach WN6164 mô hình lắp ráp minifigure Bleach Ichigo Kenpachi Yhwach Yamamoto Aizen - MoHi03   </p>
+            <p>Giá:</p>
+            <p>46.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/bleach14.jpg" />
+            <p> Mô hình figure:Relax Time Bleach - Rukia Kuchiki</p>
+            <p>Giá:</p>
+            <p>500.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/bleach15.jpg" />
+            <p>Mô hình figure : Rukia Kuchiki </p>
+            <p>Giá:</p>
+            <p>6.000.000<span>&#8363;</span></p>
+        </div>
+    </div>
+    <div class="allitem">
+        <div class="item-list">
+            <img src="~/Content/img/bleach16.jpg" />
+            <p>Mô hình sứ giả Kurosaki Ichigo - Figure Ichigo Bleach</p>
+            <p>Giá:</p>
+            <p>700.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list1">
+            <img src="~/Content/img/bleach17.jpg" />
+            <p> Mô hình figure:Kurosaki Ichigo – Fly Leaf Studio</p>
+            <p>Giá:</p>
+            <p>3.000.000<span>&#8363;</span></p>
+        </div>
+        <div class="item-list2">
+            <img src="~/Content/img/bleach18.jpg" />
+            <p>Mô hình figure : Hitsugaya </p>
+            <p>Giá:</p>
+            <p>3.348.750<span>&#8363;</span></p>
+        </div>
+    </div>
+</section>
+
+
